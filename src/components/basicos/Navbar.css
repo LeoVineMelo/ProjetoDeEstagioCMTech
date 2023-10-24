@@ -1,0 +1,88 @@
+.Navb{
+    margin-left: 0;
+    background-color: rgb(212, 211, 212);
+    padding: 2%;
+    
+}
+
+.User{
+    color: rgb(78, 12, 139);
+}
+
+.Draw{ 
+    color: aliceblue;    
+    height: 100vh;
+  background-color: blueviolet;   
+  padding: 5%;
+  border-bottom-color: aliceblue;
+  padding-left: 0;
+
+}
+
+.Navbar-Menu-Item {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.Bottao{
+    
+    padding: 0;
+    background-color: blueviolet;
+}
+
+.Bottao:hover{ 
+    color: blueviolet;
+    background-color: antiquewhite;
+  border-start-end-radius: 0px;
+   border-end-end-radius: 0px;
+}
+
+.Tob{
+    margin-left: 0%;
+}
+
+.DrawF{
+    color: aliceblue;
+    border-color: rgba(255, 255, 255, 1);
+    background-color: blueviolet;
+    justify-content: center;
+}
+
+.Avat{
+    
+    justify-content: flex-end;
+}
+
+.ContM{
+    margin-top: 50%;
+    display: flex;
+    justify-content: end;
+    
+}
+
+.Barra{
+    align-items:center;
+}
+
+.Home{
+    color:blueviolet
+}
+.Base{
+    background-color: blueviolet;
+}
+
+
+.Text{
+    width: 40%;
+}
+.Formu{
+    margin: 10;
+    width: 40%;
+}
+.BotaoCancelar{
+    background-color: rgb(148, 150, 151);
+    color: rgb(59, 58, 58);
+}
+.BotaoSalvar{
+   
+}
