@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import Navbar from '../components/basicos/Navbar'
 import { Avatar, Grid } from '@mui/material';
 import User from '../components/basicos/User';
-import {useNavigate} from 'react-router-dom'
+import {Router,useNavigate} from 'react-router-dom'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,28 +12,67 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { type } from '@testing-library/user-event/dist/type';
+import api from '../services/api';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 130 },
+  
   { field: 'perfil', headerName: 'Perfil', width: 130 },
   { field: 'departamento', headerName: 'Departamento', width: 130 },
   { field: 'organizacao', headerName: 'Organizacao', width: 130 },
-  
+
 ];
 
 const rows = [
-  { id: 1, departamento: 'Gestor', perfil: 'Jon', organizacao: 'Cmtech' },
-  { id: 2, departamento: 'Atendente', perfil: 'Cersei', organizacao: 'Cmtech' },
-  { id: 3, departamento: 'Atendente', perfil: 'Jaime', organizacao: 'Cmtech' },
-  { id: 4, departamento: 'Atendente', perfil: 'Arya', organizacao: 'Cmtech' },
-  { id: 5, departamento: 'Atendente', perfil: 'Daenerys', organizacao: 'Cmtech' },
-  { id: 6, departamento: 'Atendente', perfil: 'null', organizacao: 'Cmtech' },
-  { id: 7, departamento: 'Atendente', perfil: 'Ferrara', organizacao: 'Cmtech' },
-  { id: 8, departamento: 'Atendente', perfil: 'Rossini', organizacao: 'Cmtech' },
-  { id: 9, departamento: 'Atendente', perfil: 'Harvey', organizacao: 'Cmtech' },
+  {  departamento: 'Gestor', perfil: 'Jon', organizacao: 'Cmtech' },
+  {  departamento: 'Atendente', perfil: 'Cersei', organizacao: 'Cmtech'},
+  {  departamento: 'Atendente', perfil: 'Jaime', organizacao: 'Cmtech'},
+  {  departamento: 'Atendente', perfil: 'Arya', organizacao: 'Cmtech' },
+  {  departamento: 'Atendente', perfil: 'Daenerys', organizacao: 'Cmtech' },
+  { departamento: 'Atendente', perfil: 'null', organizacao: 'Cmtech'},
+  {  departamento: 'Atendente', perfil: 'Ferrara', organizacao: 'Cmtech' },
+  {  departamento: 'Atendente', perfil: 'Rossini', organizacao: 'Cmtech' },
+  { departamento: 'Atendente', perfil: 'Harvey', organizacao: 'Cmtech' },
 ];
 
 export default function ListPerfil() {
+
+  const [perfil, setPerfil] = useState([]);
+  const [departamento, setDepartamento] = useState([]);
+  const [organizacao, setOrganizacao] = useState([]);
+
+  useEffect(()=>{api.get('api/perfil/v1/asc',{
+    headers: {
+      
+    }
+  }).then(response => {
+    setPerfil(response.data)
+  })
+
+  });
+
+
+  useEffect(()=>{api.get('api/departamento/v1/asc',{
+    headers: {
+      
+    }
+  }).then(response => {
+    setDepartamento(response.data)
+  })
+
+  });
+
+
+  useEffect(()=>{api.get('api/organizacao/v1/asc',{
+    headers: {
+      
+    }
+  }).then(response => {
+    setOrganizacao(response.data)
+  })
+
+  });
+
 
   const navigate = useNavigate()
 
@@ -62,11 +101,11 @@ export default function ListPerfil() {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-          <TableCell>Id</TableCell>
-            <TableCell>Perfil</TableCell>
+          <TableCell></TableCell>
+            <TableCell align="right">Perfil</TableCell>
             <TableCell align="right">Departamento</TableCell>
             <TableCell align="right">Organização</TableCell>
-            <TableCell align="right"></TableCell>
+            <TableCell align="right">           </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -82,6 +121,7 @@ export default function ListPerfil() {
               <TableCell align="right">{row.perfil}</TableCell>
               <TableCell align="right">{row.departamento}</TableCell>
               <TableCell align="right">{row.organizacao}</TableCell>
+              
             </TableRow>
           ))}
         </TableBody>

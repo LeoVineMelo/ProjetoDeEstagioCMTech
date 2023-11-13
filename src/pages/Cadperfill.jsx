@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../components/basicos/Navbar'
 import { Avatar, Box, Grid } from '@mui/material';
 import User from '../components/basicos/User';
@@ -6,9 +6,10 @@ import {useNavigate} from 'react-router-dom'
 import '../components/basicos/Navbar.css'
 import Button from '@mui/material/Button';
 import { deepPurple,  grey } from '@mui/material/colors';
-
+import api from '../services/api';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+
 
 const organizacao = [
   {
@@ -50,7 +51,20 @@ const departamento = [
 
 export default function CadPerfill() {
 
+  const [nomePerfil, setNomePerfil] = useState('');
+  const [nomeDepartamento, setNomeDepartamento] = useState('');
+  const [nomeOrganizacao, setNomeOrganizacao] = useState('');
+
   const navigate = useNavigate()
+
+
+  async function CreateNewPerfil(e) {
+    e.preventDefault();
+  }
+
+  
+
+
   const listperfil = (e) =>{
     e.preventDefault()
 

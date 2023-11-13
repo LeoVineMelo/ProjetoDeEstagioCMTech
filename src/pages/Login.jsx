@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useState } from 'react';
+
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -8,7 +10,12 @@ import Card from '../components/layout/Card';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import api from '../services/api';
+
+
+
+
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -22,18 +29,38 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Login() {
 
-   const navigate = useNavigate()
+   
 
-   const login = (e) =>{
+    async function login(e) {
+        e.preventDefault();
+
+        const data = {
+            email,
+            senha
+        };
+
+        try {
+            const response = await api.post('/api/usuario/v1', data)
+            localStorage.setItem('email', email);
+            localStorage.setItem('senha', senha);
+            navigate('/home')
+        } catch (error) {
+            alert('erro de autenticação! tente novamente');
+        }
+
+    }
+
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+
+    const navigate = useNavigate()
+
+
+    const recuperarsenha = (e) => {
         e.preventDefault()
+        navigate('/recuperarsenha')
 
-        navigate('/home')
-   }
-   const recuperarsenha = (e) =>{
-    e.preventDefault()
-    navigate('/recuperarsenha')
-
-   }
+    }
     return (
         <Box component="form" sx={{ flexGrow: 1 }}>
             <Card style={{ padding: '5% 20%' }}>
@@ -43,11 +70,21 @@ export default function Login() {
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <TextField className='Text' id="outlined-basic" label="Login" variant="outlined" />
+                        <TextField className='Text'
+                            placeholder='Email'
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            id="outlined-basic"
+                            label="Login"
+                            variant="outlined"
+                        />
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <TextField prop className='Text'
+                            placeholder='Senha'
+                            value={senha}
+                            onChange={e => setSenha(e.target.value)}
                             id="outlined-password-input"
                             label="Password"
                             type="password"
@@ -66,7 +103,7 @@ export default function Login() {
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <Button  className='Botaoo' variant="contained" onClick={login}>Entrar</Button>
+                        <Button className='Botaoo' variant="contained" onClick={login}>Entrar</Button>
                     </Grid>
                 </Grid>
             </Card>
