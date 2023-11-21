@@ -1,6 +1,5 @@
 ﻿using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
-using System;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -8,7 +7,7 @@ namespace ProjetoCMTech.Repository.Implementations
 {
     public class UsuarioRepositoryImplemetation : IUsuarioRepository
     {
-        private PostgreSQLContext _context;
+        private readonly PostgreSQLContext _context;
 
         public UsuarioRepositoryImplemetation(PostgreSQLContext context)
         {
@@ -28,6 +27,8 @@ namespace ProjetoCMTech.Repository.Implementations
         {
             try
             {
+                var chave = Encoding.UTF8.GetBytes("safmnbasjkf15132");
+                usuario.Senha = ComputeHash(usuario.Senha, algorithm: new HMACMD5(chave));
                 _context.Add(usuario);
                 _context.SaveChanges();
             }
@@ -89,15 +90,16 @@ namespace ProjetoCMTech.Repository.Implementations
 
         public Usuario ValidateCredentials(UsuarioVO usuario)
         {
-            var pass = ComputeHash(usuario.Senha, new HMACMD5());
+            var chave = Encoding.UTF8.GetBytes("safmnbasjkf15132");
+            var pass = ComputeHash(usuario.Senha, algorithm:new HMACMD5(chave));
             return _context.Usuarios.FirstOrDefault(u => (u.Email == usuario.Email) && (u.Senha ==  pass));
         }
 
         private string ComputeHash(string input, HMACMD5 algorithm)
         {
-            byte[] imputBytes = Encoding.UTF8.GetBytes(input);
-            byte[] hashedBytes = algorithm.ComputeHash(imputBytes);
-            return BitConverter.ToString(hashedBytes);   
+            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
+            return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
         }
 
 

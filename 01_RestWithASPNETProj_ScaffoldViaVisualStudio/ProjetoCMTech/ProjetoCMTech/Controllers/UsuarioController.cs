@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using ProjetoCMTech.Model;
 using ProjetoCMTech.Business;
+using Microsoft.AspNetCore.Authorization;
+using ProjetoCMTech.Data.VO;
 
 namespace ProjetoCMTech.Controllers
 {
     [ApiVersion("1")]
     [ApiController]
+    
     [Route("api/[controller]/v{version:apiVersion}")]
     public class UsuarioController : ControllerBase
     {
@@ -23,12 +26,20 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType((200), Type = typeof(List<UsuarioVO>))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Get()
         {
 
             return Ok(_usuarioBusiness.FindAll());
         }
         [HttpGet("{id}")]
+        [ProducesResponseType((200), Type = typeof(UsuarioVO))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Get(long id)
         {
             var usuario = _usuarioBusiness.FindByID(id);
@@ -37,6 +48,9 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType((200), Type = typeof(UsuarioVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Post([FromBody] UsuarioVO usuario)
         {
             if (usuario == null) return BadRequest();
@@ -44,6 +58,10 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpPut]
+        [ProducesResponseType((200), Type = typeof(UsuarioVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+
 
         public IActionResult Put([FromBody] UsuarioVO usuario)
         {
@@ -52,6 +70,9 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
 
         public IActionResult Delete(long id)
         {

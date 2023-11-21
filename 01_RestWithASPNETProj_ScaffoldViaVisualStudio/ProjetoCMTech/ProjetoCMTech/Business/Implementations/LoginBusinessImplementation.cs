@@ -5,6 +5,7 @@ using ProjetoCMTech.Repository;
 using ProjetoCMTech.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 
 namespace ProjetoCMTech.Business.Implementations
 {

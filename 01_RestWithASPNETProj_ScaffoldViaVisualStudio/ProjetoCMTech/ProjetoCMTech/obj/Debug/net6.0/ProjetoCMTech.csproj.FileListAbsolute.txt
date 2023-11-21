@@ -93,3 +93,9 @@ C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPN
 C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\JWT.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\bin\Debug\net6.0\PasswordHash.dll

@@ -13,12 +13,25 @@ using Microsoft.Extensions.Options;
 using JWT.Builder;
 using System.Net;
 using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Rewrite;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors(options => options.AddDefaultPolicy(builder =>
+{
+    builder.AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+}));
+
 builder.Services.AddControllers();
+
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -37,15 +50,55 @@ builder.Services.AddSingleton(tokenconfigurations);
 
 builder.Services.AddAuthentication(options =>
 {
-    
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = false,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = tokenconfigurations.Issuer,
+            ValidAudience = tokenconfigurations.Audience,
+
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenconfigurations.Secret))
+        };
+    });
+
+
+builder.Services.AddAuthorization(auth =>
+{
+    auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+        .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+        .RequireAuthenticatedUser().Build());
 });
 
 // Adicionando suporte ao contexto via EF
 builder.Services.AddDbContext<PostgreSQLContext>(options =>
- options.UseNpgsql(connection, npgsqlOptions => npgsqlOptions.SetPostgresVersion(new Version("16.0.1"))));
+ options.UseNpgsql(connection, npgsqlOptions => npgsqlOptions.SetPostgresVersion(new Version("16.0.0"))));
 
 //Versioning API
 builder.Services.AddApiVersioning();
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1",
+        new Microsoft.OpenApi.Models.OpenApiInfo
+        {
+            Title = "PROJETO CMTECH",
+            Version = "v1",
+            Description = "API RESTFULL'PROJETO CMTECH'",
+            Contact = new Microsoft.OpenApi.Models.OpenApiContact
+            {
+                Name =  "Leonardo Melo",
+                Url = new Uri ("https://github.com/LeoVineMelo")
+
+            }
+        });
+});
 
 //Dependency Injection
 builder.Services.AddScoped<IAtendimentoBusiness, AtendimentoBusinessImplemetation>();
@@ -112,24 +165,6 @@ if (env.IsDevelopment())
 	}
 }
  
-
-// Configure the HTTP request pipeline.
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
 void MigrarBaseDeDados(string connection)
 {
     try
@@ -147,4 +182,29 @@ void MigrarBaseDeDados(string connection)
         Log.Error("Erro na migração da base de dados: ", ex);
         throw;
     }
+
+// Configure the HTTP request pipeline.
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json",
+            "PROJETO CMTECH - v1");
+    });
+}
+var option = new RewriteOptions();
+option.AddRedirect("^$", "swagger");
+app.UseRewriter(option);
+
+app.UseHttpsRedirection();
+
+app.UseCors();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
 }

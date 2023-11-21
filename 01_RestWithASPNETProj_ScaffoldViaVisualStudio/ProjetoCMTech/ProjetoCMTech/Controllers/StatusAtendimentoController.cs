@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using ProjetoCMTech.Model;
 using ProjetoCMTech.Business;
+using Microsoft.AspNetCore.Authorization;
+using ProjetoCMTech.Data.VO;
 
 namespace ProjetoCMTech.Controllers
 {
     [ApiVersion("1")]
     [ApiController]
+    [Authorize("Bearer")]
     [Route("api/[controller]/v{version:apiVersion}")]
     public class StatusAtendimentoController : ControllerBase
     {
@@ -23,20 +26,31 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType((200), Type = typeof(List<StatusAtendimentoVO>))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Get()
         {
 
             return Ok(_statusatendimentoBusiness.FindAll());
         }
         [HttpGet("{id}")]
+        [ProducesResponseType((200), Type = typeof(StatusAtendimentoVO))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Get(long id)
         {
-            var person = _statusatendimentoBusiness.FindByID(id);
-            if (person == null) return NotFound();
-            return Ok(person);
+            var statusatendimento = _statusatendimentoBusiness.FindByID(id);
+            if (statusatendimento == null) return NotFound();
+            return Ok(statusatendimento);
         }
 
         [HttpPost]
+        [ProducesResponseType((200), Type = typeof(StatusAtendimentoVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Post([FromBody] StatusAtendimentoVO statusatendimento)
         {
             if (statusatendimento == null) return BadRequest();
@@ -44,6 +58,10 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpPut]
+        [ProducesResponseType((200), Type = typeof(StatusAtendimentoVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+
 
         public IActionResult Put([FromBody] StatusAtendimentoVO statusatendimento)
         {
@@ -52,6 +70,9 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
 
         public IActionResult Delete(long id)
         {
