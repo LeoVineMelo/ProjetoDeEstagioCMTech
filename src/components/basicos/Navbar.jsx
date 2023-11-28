@@ -128,6 +128,11 @@ export default function PersistentDrawerLeft({ children }) {
 
         navigate('/atendimento')
     }
+    const relatendimentos = (e) => {
+        e.preventDefault()
+
+        navigate('/relatendimentos')
+    }
 
     return (
         <Box sx={{ display: 'flex', height: '100vh', maxHeight: '100vh', overflowY: 'auto' }}>
@@ -227,7 +232,7 @@ export default function PersistentDrawerLeft({ children }) {
                     <ListItem className='Bottao Navbar-Menu-Item'>
                         <ListItemButton>
                             <ListItemIcon sx={{ color: deepPurple[200], justifyContent: 'center', display: 'flex' }}>
-                                <HeadsetMicRoundedIcon sx={{ fontSize: 30 }} />
+                                <HeadsetMicRoundedIcon sx={{ fontSize: 30 }} onClick={relatendimentos} />
                             </ListItemIcon>
                             <ListItemText />
                         </ListItemButton>

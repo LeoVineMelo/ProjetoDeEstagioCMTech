@@ -25,6 +25,16 @@ export default function Operacoes() {
 
         navigate('/listusuario')
     }
+    const listdepartamento = (e) => {
+      e.preventDefault()
+
+      navigate('/listdepartamento')
+  }
+  const listorganizacao = (e) => {
+    e.preventDefault()
+
+    navigate('/listorganizacao')
+}
 
   return (
     <Navbar>
@@ -40,10 +50,10 @@ export default function Operacoes() {
         <Button className='Text' variant="contained" onClick={listperfil} >Perfil</Button>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-        <Button className='Text' variant="contained">Departamento</Button>
+        <Button className='Text' variant="contained" onClick={listdepartamento}>Departamento</Button>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-        <Button className='Text' variant="contained">Organização</Button>
+        <Button className='Text' variant="contained"onClick={listorganizacao}>Organização</Button>
         </Grid>
       </Grid>
     </Navbar>

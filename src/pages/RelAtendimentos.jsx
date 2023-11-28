@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 
 import TextField from '@mui/material/TextField';
 import '../pages/ListUsuario.css';
-import { purple } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { alpha } from '@mui/material/styles';
@@ -28,10 +28,10 @@ const ColorButton = styled(Button)(({ theme }) => ({
   borderRadius: 30,
   marginTop: '20px',
   padding: '5px 12px',
-  color: theme.palette.getContrastText(purple[700]),
-  backgroundColor: purple[800],
+  color: theme.palette.getContrastText(grey[200]),
+  backgroundColor: grey[300],
   '&:hover': {
-    backgroundColor: purple[900],
+    backgroundColor: grey[400],
   },
 }));
 
@@ -78,11 +78,12 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 
 const columns = [
   { id: 'nome', name: 'nome' },
-  { id: 'perfilid', name: 'Perfil' },
-  { id: 'departamentoid', name: 'Departamento' },
-  { id: 'Status', name: 'Status' }
+  { id: 'perfilid', name: 'Área' },
+  { id: 'departamentoid', name: 'canal' },
+  { id: 'Status', name: 'data' }
 
 ]
+
 
 
 
@@ -144,8 +145,20 @@ const handleRowsPerPage = (event) => {
             </InputLabel>
             <BootstrapInput defaultValue="" id="bootstrap-input" />
           </FormControl>
+          <FormControl variant="standard">
+            <InputLabel type='datatime' shrink htmlFor="bootstrap-input">
+              Período de
+            </InputLabel>
+            <BootstrapInput defaultValue="" id="bootstrap-input" />
+          </FormControl>
+          <FormControl variant="standard">
+            <InputLabel shrink htmlFor="bootstrap-input">
+              Até
+            </InputLabel>
+            <BootstrapInput defaultValue="" id="bootstrap-input" />
+          </FormControl>
 
-          <ColorButton className='BtFiltrar' type='submit' variant="contained">Filtrar</ColorButton>
+          <ColorButton style={{color:'white'}} className='BtFiltrar' type='submit' variant="contained">Filtrar</ColorButton>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 
@@ -169,10 +182,10 @@ const handleRowsPerPage = (event) => {
                             let value = row[column.id];
                             return (
                               <TableCell key={value}>
-                                {value}
+                                {value} 
                               </TableCell>
                             )
-                          })}
+                          })} 
                         </TableRow>
                       )
                     })}

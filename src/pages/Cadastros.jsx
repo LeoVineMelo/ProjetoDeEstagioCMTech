@@ -26,6 +26,17 @@ export default function Cadastros() {
 
         navigate('/cadastrodecliente')
     }
+    const cadastrodeorganizacao = (e) => {
+        e.preventDefault()
+
+        navigate('/cadastrodeorganizacao')
+    }
+    const caddepartamento = (e) => {
+        e.preventDefault()
+
+        navigate('/caddepartamento')
+    }
+
 
     return (
         <Navbar>
@@ -36,6 +47,12 @@ export default function Cadastros() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <Button variant="contained"onClick={cadastrodeusuario}>Cadastro de Usuário</Button>
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <Button variant="contained"onClick={cadastrodeorganizacao}>Cadastro de Organização</Button>
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <Button variant="contained"onClick={caddepartamento}>Cadastro de Departamentos</Button>
                 </Grid>
                 <Grid display={'flex'} item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <Button variant="text" onClick={home}><ArrowBackIosIcon /> Voltar</Button>

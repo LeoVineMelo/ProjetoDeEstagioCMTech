@@ -71,9 +71,14 @@
     background-color: blueviolet;
 }
 
+.format{
+    width:70% ;
+    
+}
 
 .Text{
     width: 40%;
+    
 }
 .Formu{
     margin: 10;
@@ -83,6 +88,7 @@
     background-color: rgb(148, 150, 151);
     color: rgb(59, 58, 58);
 }
-.BotaoSalvar{
+.borda{
+    border-radius: 30;
    
 }

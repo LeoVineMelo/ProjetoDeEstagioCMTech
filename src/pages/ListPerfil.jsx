@@ -1,8 +1,8 @@
-import React, {useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../components/basicos/Navbar'
-import { Avatar, Grid } from '@mui/material';
+import { Avatar, Grid, TablePagination } from '@mui/material';
 import User from '../components/basicos/User';
-import {Router,useNavigate} from 'react-router-dom'
+import { Router, useNavigate } from 'react-router-dom'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -14,119 +14,165 @@ import Button from '@mui/material/Button';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { type } from '@testing-library/user-event/dist/type';
 import api from '../services/api';
+import { purple } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
+
+
+const ColorButton = styled(Button)(({ theme }) => ({
+
+  borderRadius: 30,
+  marginTop: '20px',
+  padding: '5px 30px',
+  color: theme.palette.getContrastText(purple[700]),
+  backgroundColor: purple[800],
+  '&:hover': {
+    backgroundColor: purple[900],
+  },
+}));
+
 
 const columns = [
-  
-  { field: 'perfil', headerName: 'Perfil', width: 130 },
-  { field: 'departamento', headerName: 'Departamento', width: 130 },
-  { field: 'organizacao', headerName: 'Organizacao', width: 130 },
-
+  { id: 'id', name: 'Perfil' },
+  { id: 'id', name: 'Departamento' },
+  { id: 'id', name: 'Organização' }
 ];
 
-const rows = [
-  {  departamento: 'Gestor', perfil: 'Jon', organizacao: 'Cmtech' },
-  {  departamento: 'Atendente', perfil: 'Cersei', organizacao: 'Cmtech'},
-  {  departamento: 'Atendente', perfil: 'Jaime', organizacao: 'Cmtech'},
-  {  departamento: 'Atendente', perfil: 'Arya', organizacao: 'Cmtech' },
-  {  departamento: 'Atendente', perfil: 'Daenerys', organizacao: 'Cmtech' },
-  { departamento: 'Atendente', perfil: 'null', organizacao: 'Cmtech'},
-  {  departamento: 'Atendente', perfil: 'Ferrara', organizacao: 'Cmtech' },
-  {  departamento: 'Atendente', perfil: 'Rossini', organizacao: 'Cmtech' },
-  { departamento: 'Atendente', perfil: 'Harvey', organizacao: 'Cmtech' },
-];
+
 
 export default function ListPerfil() {
+
+  const handlechangepage = (event, newpage) => {
+    pageChange(newpage)
+  }
+
+  const handleRowspage = (event) => {
+    rowPerPageChange(+event.target.value)
+    pageChange(0)
+  }
+
+  const [rows, rowChange] = useState([]);
+  const [page, pageChange] = useState(0);
+  const [rowPerPage, rowPerPageChange] = useState(5);
+
+
+  useEffect(() => {
+    fetch("https://localhost:44300/api/Usuario/v1").then(resp => {
+      return resp.json();
+    }).then(resp => {
+      rowChange(resp);
+    }).catch(e => {
+      console.log(e.message)
+    })
+  }, [])
+
+
 
   const [perfil, setPerfil] = useState([]);
   const [departamento, setDepartamento] = useState([]);
   const [organizacao, setOrganizacao] = useState([]);
 
-  useEffect(()=>{api.get('api/perfil/v1/asc',{
-    headers: {
-      
-    }
-  }).then(response => {
-    setPerfil(response.data)
-  })
+  useEffect(() => {
+    api.get('api/perfil/v1/asc', {
+      headers: {
+
+      }
+    }).then(response => {
+      setPerfil(response.data)
+    })
 
   });
 
 
-  useEffect(()=>{api.get('api/departamento/v1/asc',{
-    headers: {
-      
-    }
-  }).then(response => {
-    setDepartamento(response.data)
-  })
+  useEffect(() => {
+    api.get('api/departamento/v1/asc', {
+      headers: {
+
+      }
+    }).then(response => {
+      setDepartamento(response.data)
+    })
 
   });
 
 
-  useEffect(()=>{api.get('api/organizacao/v1/asc',{
-    headers: {
-      
-    }
-  }).then(response => {
-    setOrganizacao(response.data)
-  })
+  useEffect(() => {
+    api.get('api/organizacao/v1/asc', {
+      headers: {
+
+      }
+    }).then(response => {
+      setOrganizacao(response.data)
+    })
 
   });
 
 
   const navigate = useNavigate()
 
-   const cadperfill = (e) =>{
-        e.preventDefault()
+  const cadperfill = (e) => {
+    e.preventDefault()
 
-        navigate('/cadperfill')
-   }
+    navigate('/cadperfill')
+  }
 
-   const operacoes = (e) => {
+  const operacoes = (e) => {
     e.preventDefault()
 
     navigate('/operacoes')
-}
+  }
 
   return (
     <Navbar>
       <Grid container spacing={2}>
-        <Grid display={'flex'}item xs={6} sm={6} md={6} lg={6} xl={6}>
-        <Button variant="text" onClick={operacoes}><ArrowBackIosIcon/> Voltar</Button>
+        <Grid display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
+          <Button style={{color:'lightgrey'}} variant="text" onClick={operacoes}><ArrowBackIosIcon /> Voltar</Button>
         </Grid>
         <Grid justifyContent={'flex-end'} display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
-        <Button variant="contained" onClick={cadperfill}>Adicionar</Button>
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-          <TableCell></TableCell>
-            <TableCell align="right">Perfil</TableCell>
-            <TableCell align="right">Departamento</TableCell>
-            <TableCell align="right">Organização</TableCell>
-            <TableCell align="right">           </TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+          <ColorButton variant="contained" onClick={cadperfill}>Adicionar</ColorButton>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Paper sx={{ width: '100' }}>
+            <TableContainer>
+              <Table stickyHeader>
+                <TableHead>
+                  <TableRow>
+                    {columns.map((column) => (
+                      <TableCell style={{ color: 'lightgrey' }} key={column.id}>{column.name}</TableCell>
+                    ))}
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows && rows
+                    .slice(page * rowPerPage, page * rowPerPage + rowPerPage)
+                    .map((row, i) => {
+                      return (
+                        <TableRow key={i}>
+                          {columns && columns.map((column, i) => {
+                            let value = row[column.id];
+                            return (
+                              <TableCell style={{ backgroundColor: 'lightgrey', color: 'black' }} key={value}>
+                                {value}
+                              </TableCell>
+                            )
+                          })}
+                        </TableRow>
+                      )
+                    })}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <TablePagination rowsPerPageOptions={[5, 10, 25]}
+              rowsPerPage={rowPerPage}
+              page={page}
+              count={rows.length}
+              component="div"
+              onPageChange={handlechangepage}
+              onRowsPerPageChange={handleRowspage}
             >
-              <TableCell component="th" scope="row">
-                {row.id}
-              </TableCell>
-              
-              <TableCell align="right">{row.perfil}</TableCell>
-              <TableCell align="right">{row.departamento}</TableCell>
-              <TableCell align="right">{row.organizacao}</TableCell>
-              
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-          </Grid>
+
+            </TablePagination>
+          </Paper>
+        </Grid>
       </Grid>
     </Navbar>
   )

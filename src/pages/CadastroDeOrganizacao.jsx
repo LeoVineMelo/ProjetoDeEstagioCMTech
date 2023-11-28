@@ -66,26 +66,25 @@ export default function AutoGrid() {
 
                     </Grid>
 
-                    <Grid className='Avt' justifyContent={'center'} display={'flex'} item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <Avatar src="/broken-image.jpg" sx={{ width: 80, height: 80 }} />
-
+                    
+                    
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Nome da Organização</p> </Grid>
+                    <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
+                        <TextField prop fullWidth id="outlined-basic" label="Nome da Organização" variant="outlined" />
                     </Grid>
-                    <Grid justifyContent={'center'} display={'flex'} item xs={12} sm={12} md={12} lg={12} xl={12}>
-
-                        <h3>Nome Cliente</h3>
-                    </Grid>
-                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Telefone</p> </Grid>
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Telefone</p></Grid>
                     <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
                         <TextField prop fullWidth id="outlined-basic" label="Telefone" variant="outlined" />
-                    </Grid>
-                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>E-mail</p></Grid>
-                    <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <TextField prop fullWidth id="outlined-basic" label="E-mail" variant="outlined" />
 
                     </Grid>
-                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Empresa</p></Grid>
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Segmento</p></Grid>
                     <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <TextField className='Arredondado' prop fullWidth id="outlined-basic" label="Empresa" variant="outlined" />
+                        <TextField className='Arredondado' prop fullWidth id="outlined-basic" label="Segmento" variant="outlined" />
+
+                    </Grid>
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Grupo</p></Grid>
+                    <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
+                        <TextField className='Arredondado' prop fullWidth id="outlined-basic" label="Grupo" variant="outlined" />
 
                     </Grid>
 

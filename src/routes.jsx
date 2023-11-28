@@ -15,6 +15,12 @@ import Cadastros from "./pages/Cadastros";
 import CadastroDeCliente from './pages/CadastroDeCliente';
 import CadastroDeUsuario from './pages/CadastroDeUSuario';
 import Atendimento from  './pages/Atendimento';
+import ListDepartamento from './pages/ListDepartamento';
+import ListOrganizacao from './pages/ListOrganizacao';
+import RelAtendimentos from './pages/RelAtendimentos';
+import CadastroDeOrganizacao from './pages/CadastroDeOrganizacao';
+import CadDepartamento from './pages/CadDepartamentos';
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -68,5 +74,26 @@ export const router = createBrowserRouter([
     path: "atendimento",
     element: <Atendimento/>
   },
+  {
+    path: "listdepartamento",
+    element: <ListDepartamento/>
+  },
+  {
+    path: "listorganizacao",
+    element: <ListOrganizacao/>
+  },
+  {
+    path: "relatendimentos",
+    element: <RelAtendimentos/>
+  },
+  {
+    path: "cadastrodeorganizacao",
+    element: <CadastroDeOrganizacao/>
+  },
+  {
+    path: "caddepartamento",
+    element: <CadDepartamento/>
+  },
+
 
 ]);

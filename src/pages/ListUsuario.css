@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+
+.filter {
+    border-radius: 30px;
+    width: 20%;
+
+    border-color: rgb(53, 53, 52);
+    padding: 10px;
+    font: 400 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.BtFiltrar {
+
+    width: 15%;
+    border-radius: 30px;
+    background-color: blueviolet;
+
+}

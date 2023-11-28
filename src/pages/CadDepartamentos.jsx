@@ -11,7 +11,6 @@ import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
 
-
 import { purple } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
 
@@ -106,10 +105,8 @@ export default function CadPerfill() {
   return (
     <Navbar>
       <Grid justifyContent={'center'} container spacing={3} display={'flex'}
-      > <h1>Cadastro de perfil</h1>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-          <TextField className='Formu' id="outlined-basic" label="Nome do perfil" variant="outlined" />
-        </Grid>
+      > <h1>Cadastro de Departamento</h1>
+        
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 
           <TextField
