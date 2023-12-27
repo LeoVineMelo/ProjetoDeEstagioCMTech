@@ -47,6 +47,21 @@ namespace ProjetoCMTech.Controllers
             return Ok(usuario);
         }
 
+        [HttpPost("search")]
+        [ProducesResponseType((200), Type = typeof(UserPesquisaVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        public IActionResult Search([FromBody] UserPesquisaVO pesquisa)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (pesquisa == null) return BadRequest();
+           var itens = _usuarioBusiness.FindAll(pesquisa);
+           var total = _usuarioBusiness.FindAllCount(pesquisa);
+            return Ok(itens);
+        }
+
         [HttpPost]
         [ProducesResponseType((200), Type = typeof(UsuarioVO))]
         [ProducesResponseType(400)]

@@ -87,13 +87,73 @@ const columns = [
 
 
 
+
+
 export default function ListUsuario() {
+
+  const [nome, setNome] = useState('');
+  const [cargo, setCargo] = useState('');
+  const [setor, setSetor] = useState('');
+  const [periodo, setperiodo] = useState('');
 
   const [rows, rowChange] = useState([]);
   const [page, pageChange] = useState(0);
   const [rowPerPage, rowPerPageChange] = useState(5);
 
+async function FazerPesquisa(e) {
+  e.preventDefault();
 
+  Pesquisa()
+}
+
+async function Pesquisa() {
+
+  const data = {
+    nome: nome != null ? nome : "",
+    cargo: cargo != null ? cargo : "",
+    setor: setor != null ? setor : "",
+    periodo:periodo != null ? periodo : "",
+    
+
+  };
+
+  try {
+    //const response = await api.post('api/Usuario/v1/search', data)
+    fetch(
+      "https://localhost:44300/api/Atendimento/v1/search",
+      {
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        method: 'POST',
+        body: JSON.stringify(data)
+      }).then(resp => {
+      return resp.json();
+    }).then(resp => {
+      console.log(resp)
+      console.log(typeof resp)
+      let list = resp.map(item => {
+        return {
+          ...item,
+          Perfil: item.perfil ? item.perfil.nome : '',
+          Organizacao: item.organizacao ? item.organizacao.nome : '',
+          Departamento: item.departamento ? item.departamento.nome : ''
+        }
+      })
+      console.log(list)
+      console.log(typeof list)
+      rowChange(list);
+    }).catch(e => {
+      console.log(e.message)
+    })
+
+  } catch (error) {
+    console.log(error);
+
+  }
+
+}
   const handlechangepage =(event, newpage)=>{
   pageChange(newpage)
 }
@@ -105,7 +165,7 @@ const handleRowsPerPage = (event) => {
 
 
   useEffect(() => {
-    fetch("https://localhost:44300/api/Usuario/v1").then(resp => {
+    fetch("https://localhost:44300/api/Atendimento/v1").then(resp => {
       return resp.json();
     }).then(resp => {
       rowChange(resp);

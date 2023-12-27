@@ -23,3 +23,20 @@ C:\Users\leona\OneDrive\Área de Trabalho\ProjetoEstagioCMTech\01_RestWithASPNET
 C:\Users\leona\OneDrive\Área de Trabalho\ProjetoEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.pdb
 C:\Users\leona\OneDrive\Área de Trabalho\ProjetoEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.genruntimeconfig.cache
 C:\Users\leona\OneDrive\Área de Trabalho\ProjetoEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\ProjetoCMTech\obj\Debug\net6.0\ref\ProjetoCMTech.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.AssemblyInfoInputs.cache
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.AssemblyInfo.cs
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.csproj.CoreCompileInputs.cache
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\refint\ProjetoCMTech.dll
+C:\Users\leona\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech (2)\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.pdb
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.AssemblyInfoInputs.cache
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.AssemblyInfo.cs
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.csproj.CoreCompileInputs.cache
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.sourcelink.json
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.dll
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\refint\ProjetoCMTech.dll
+C:\Users\flavi\OneDrive\Área de Trabalho\ProjetoDeEstagioCMTech\01_RestWithASPNETProj_ScaffoldViaVisualStudio\ProjetoCMTech\obj\Debug\net6.0\ProjetoCMTech.pdb

@@ -1,24 +1,38 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoCMTech.Model
 {
-    [Table("atendimento")]
+
     public class Atendimento
     {
-        [Column("id")]
+
+
         public long Id { get; set; }
+        [ForeignKey("StatusAtendimento")]
         [Column("status_atendimento_id")]
         public long StatusAtendimentoId { get; set; }
-        [Column("departamento_id")]
-        public int DepartamentoId { get; set; }
-        [Column("usuario_id")]
-        public int UsuarioId { get; set; }
-        [Column("cliente_id")]
-        public int ClienteId { get; set; }
-        [Column("organizacao_id")]
-        public int OrganizacaoId { get; set; }
-        [Column("data_hora_atendimento")]
+        public StatusAtendimento StatusAtendimento { get; set; }
+        [ForeignKey("Departamento")]
+
+        public long DepartamentoId { get; set; }
+        public Departamento Departamento { get; set; }
+        [ForeignKey("Usuario")]
+
+        public long UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
+        [ForeignKey("Cliente")]
+
+        public long ClienteId { get; set; }
+        public Usuario Cliente { get; set; }
+        [ForeignKey("Organizacao")]
+
+        public long OrganizacaoId { get; set; }
+        public Organizacao Organizacao { get; set; }
+
         public DateTime DataHoraAtendimento { get; set; }
+
+        public IEnumerable<ChatAtendimento> ChatAtendimentos { get; set; }
        
     }
 }

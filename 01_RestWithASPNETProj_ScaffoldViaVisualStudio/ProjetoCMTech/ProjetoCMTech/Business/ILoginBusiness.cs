@@ -5,6 +5,6 @@ namespace ProjetoCMTech.Business
 {
     public interface ILoginBusiness
     {
-        TokenVO ValidateCredentials(UsuarioVO usuario);
+        TokenVO ValidateCredentials(UsuarioLoginVO usuario);
     }
 }

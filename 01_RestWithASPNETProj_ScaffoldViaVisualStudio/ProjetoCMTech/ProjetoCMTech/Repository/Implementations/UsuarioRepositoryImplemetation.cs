@@ -1,5 +1,8 @@
-﻿using ProjetoCMTech.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoCMTech.Data.VO;
+using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -13,15 +16,55 @@ namespace ProjetoCMTech.Repository.Implementations
         {
             _context = context;
         }
-       public List<Usuario> FindAll()
+       public List<Usuario> FindAll(UserPesquisaVO pesquisa = null)
         {
-           
-            return _context.Usuarios.ToList();
+
+            var list = _context.Usuarios
+                .Include(x => x.Perfil)
+                .Include(x => x.Departamento)
+                .Include(x => x.Organizacao)
+                .AsQueryable();
+
+            list = FindAllFilter(list, pesquisa);
+
+            return list.ToList();
+        }
+
+        public int FindAllCount(UserPesquisaVO pesquisa = null)
+        {
+
+            var list = _context.Usuarios
+                .Include(x => x.Perfil)
+                .Include(x => x.Departamento)
+                .Include(x => x.Organizacao)
+                .AsQueryable();
+
+            list = FindAllFilter(list, pesquisa);
+            return list.Count();
+        }
+         private IQueryable<Usuario> FindAllFilter(IQueryable<Usuario> list, UserPesquisaVO pesquisa)
+        {
+            if (pesquisa != null)
+            {
+                if (!string.IsNullOrEmpty(pesquisa.Nome))
+                    list = list.Where(x => EF.Functions.Like(x.Nome.Trim().ToLower(), $"%{pesquisa.Nome.Trim().ToLower()}%"));
+                if (!string.IsNullOrEmpty(pesquisa.Cargo))
+                    list = list.Where(x => EF.Functions.Like(x.Perfil.Nome.Trim().ToLower(), $"%{pesquisa.Cargo.Trim().ToLower()}%"));
+                if (!string.IsNullOrEmpty(pesquisa.Setor))
+                    list = list.Where(x => EF.Functions.Like(x.Departamento.Nome.Trim().ToLower(), $"%{pesquisa.Setor.Trim().ToLower()}%"));
+            }
+            return list;
         }
 
 
-
-        public Usuario FindByID(long id) => _context.Usuarios.SingleOrDefault(p => p.Id.Equals(id));
+        public Usuario FindByID(long id)
+        {
+            return _context.Usuarios
+                .Include(x => x.Perfil)
+                .Include(x => x.Departamento)
+                .Include(x => x.Organizacao)
+                .SingleOrDefault(p => p.Id.Equals(id));
+        }
 
         public Usuario Create(Usuario usuario)
         {
@@ -88,11 +131,11 @@ namespace ProjetoCMTech.Repository.Implementations
             return _context.Usuarios.Any(p => p.Id.Equals(id));
         }
 
-        public Usuario ValidateCredentials(UsuarioVO usuario)
+        public Usuario ValidateCredentials(UsuarioLoginVO usuario)
         {
             var chave = Encoding.UTF8.GetBytes("safmnbasjkf15132");
             var pass = ComputeHash(usuario.Senha, algorithm:new HMACMD5(chave));
-            return _context.Usuarios.FirstOrDefault(u => (u.Email == usuario.Email) && (u.Senha ==  pass));
+            return _context.Usuarios.IgnoreAutoIncludes().FirstOrDefault(u => (u.Email == usuario.Email) && (u.Senha ==  pass));
         }
 
         private string ComputeHash(string input, HMACMD5 algorithm)

@@ -1,25 +1,48 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoCMTech.Model
 {
-    [Table("usuario")]
+
     public class Usuario
     {
-        [Column("id")]
+
         public long Id { get; set; }
-        [Column("departamento_id")]
-        public int? DepartamentoId { get; set; }
-        [Column("organizacao_id")]
-        public int? OrganizacaoId { get; set; }
-        [Column("perfil_id")]
-        public int PerfilId { get; set; }
-        [Column("nome")]
+        [ForeignKey("Departamento")]
+
+        public long? DepartamentoId { get; set; }
+
+        public Departamento? Departamento { get; set; }
+        [ForeignKey("Organizacao")]
+
+        public long? OrganizacaoId { get; set; }
+
+        public Organizacao? Organizacao { get; set; }
+        
+        [ForeignKey("Perfil")]
+
+        public long PerfilId { get; set; }
+
+        public Perfil Perfil { get; set; }
+
         public string Nome { get; set; }
-        [Column("email")]
+
         public string Email { get; set; }
-        [Column("senha")]
+
         public string Senha { get; set; }
-        [Column("data_cadastro")]
+
         public DateTime DataCadastro { get; set; }
+
+        public IEnumerable<Atendimento> Atendimentos { get; set; }
+
+        public IEnumerable<Atendimento> AtendimentosClientes { get; set; }
+
+        public IEnumerable<ChatAtendimento> ChatAtendimentoRemetentes { get; set; }
+
+        public IEnumerable<ChatAtendimento> ChatAtendimentoDestinatarios { get; set; }
+
+        public IEnumerable<Connection> Connections { get; set; }
+
+
     }
 }

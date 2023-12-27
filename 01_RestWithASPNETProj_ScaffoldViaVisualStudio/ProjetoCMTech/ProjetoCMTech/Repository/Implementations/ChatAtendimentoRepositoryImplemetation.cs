@@ -1,4 +1,5 @@
-﻿using ProjetoCMTech.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
 using System;
 
@@ -15,12 +16,19 @@ namespace ProjetoCMTech.Repository.Implementations
        public List<ChatAtendimento> FindAll()
         {
            
-            return _context.ChatAtendimentos.ToList();
+            return _context.ChatAtendimentos
+                .Include(x => x.Atendimento)
+                .ToList();
         }
 
 
 
-        public ChatAtendimento FindByID(long id) => _context.ChatAtendimentos.SingleOrDefault(p => p.Id.Equals(id));
+        public ChatAtendimento FindByID(long id)
+        {
+            return _context.ChatAtendimentos
+                .Include(x => x.Atendimento)
+                .SingleOrDefault(p => p.Id.Equals(id));
+        }
 
         public ChatAtendimento Create(ChatAtendimento chatatendimento)
         {

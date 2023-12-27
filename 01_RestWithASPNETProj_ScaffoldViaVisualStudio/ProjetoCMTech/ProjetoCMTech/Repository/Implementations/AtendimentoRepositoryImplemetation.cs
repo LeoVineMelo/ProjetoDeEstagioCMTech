@@ -1,4 +1,5 @@
-﻿using ProjetoCMTech.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
 using System;
 
@@ -15,12 +16,29 @@ namespace ProjetoCMTech.Repository.Implementations
        public List<Atendimento> FindAll()
         {
            
-            return _context.Atendimentos.ToList();
+            return _context.Atendimentos
+                .Include(x => x.Departamento)
+                .Include(x => x.Organizacao)
+                .Include(x => x.StatusAtendimento)
+                .Include(x => x.Usuario)
+                   // .ThenInclude(u => u.Perfil) :recupera o include do include (ex: perfil do usuário)
+                .Include(x => x.Cliente)
+                .ToList();
         }
 
 
 
-        public Atendimento FindByID(long id) => _context.Atendimentos.SingleOrDefault(p => p.Id.Equals(id));
+        public Atendimento FindByID(long id)
+        {
+            return _context.Atendimentos
+                .Include(x => x.Departamento)
+                .Include(x => x.Organizacao)
+                .Include(x => x.StatusAtendimento)
+                .Include(x => x.Usuario)
+                 // .ThenInclude(u => u.Perfil) :recupera o include do include (ex: perfil do usuário)
+                .Include(x => x.Cliente)
+                .SingleOrDefault(p => p.Id.Equals(id));
+        }
 
         public Atendimento Create(Atendimento atendimento)
         {

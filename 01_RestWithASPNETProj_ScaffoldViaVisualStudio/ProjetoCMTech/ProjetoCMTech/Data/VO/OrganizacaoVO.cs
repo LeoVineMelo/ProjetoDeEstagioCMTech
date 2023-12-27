@@ -8,9 +8,11 @@ namespace ProjetoCMTech.Model
 
         public long Id { get; set; }
 
-        public int SegmentoId { get; set; }
+        public long SegmentoId { get; set; }
+        public SegmentoVO Segmento { get; set; }
 
-        public string GrupoId { get; set; }
+        public long GrupoId { get; set; }
+        public GrupoVO Grupo { get; set; }
 
         public string Nome { get; set; }
 

@@ -1,14 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoCMTech.Model
 {
-    [Table("segmento")]
+    
     public class Segmento
     {
-        [Column("id")]
+
+
         public long Id { get; set; }
-        [Column("nome")]
+
         public string Nome { get; set; }
+
+        public IEnumerable<Organizacao> Organizacaos { get; set; }
 
     }
 }

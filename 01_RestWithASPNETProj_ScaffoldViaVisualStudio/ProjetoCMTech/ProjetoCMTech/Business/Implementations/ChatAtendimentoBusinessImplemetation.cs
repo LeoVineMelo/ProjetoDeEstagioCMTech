@@ -10,12 +10,12 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IChatAtendimentoRepository _repository;
 
-        private readonly ChatAtendimentoCoverter _coverter;
+        private readonly ChatAtendimentoConverter _coverter;
 
         public ChatAtendimentoBusinessImplemetation(IChatAtendimentoRepository repository)
         {
             _repository = repository;
-            _coverter = new ChatAtendimentoCoverter();
+            _coverter = new ChatAtendimentoConverter();
         }
        public List<ChatAtendimentoVO> FindAll()
         {

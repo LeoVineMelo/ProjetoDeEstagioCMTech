@@ -32,8 +32,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 
 const columns = [
-  { id: 'id', name: 'Departamento' },
-  { id: 'id', name: 'Organização' }
+  { id: 'nome', name: 'Departamento' },
+  { id: 'nome', name: 'Organização' }
 ];
 
 
@@ -55,7 +55,7 @@ export default function ListPerfil() {
 
 
   useEffect(() => {
-    fetch("https://localhost:44300/api/Usuario/v1").then(resp => {
+    fetch("https://localhost:44300/api/Departamento/v1").then(resp => {
       return resp.json();
     }).then(resp => {
       rowChange(resp);
@@ -108,10 +108,10 @@ export default function ListPerfil() {
 
   const navigate = useNavigate()
 
-  const cadperfill = (e) => {
+  const caddepartamento = (e) => {
     e.preventDefault()
 
-    navigate('/cadperfill')
+    navigate('/caddepartamento')
   }
 
   const operacoes = (e) => {
@@ -127,7 +127,7 @@ export default function ListPerfil() {
           <Button style={{color:'lightgrey'}} variant="text" onClick={operacoes}><ArrowBackIosIcon /> Voltar</Button>
         </Grid>
         <Grid justifyContent={'flex-end'} display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
-          <ColorButton variant="contained" onClick={cadperfill}>Adicionar</ColorButton>
+          <ColorButton variant="contained" onClick={caddepartamento}>Adicionar</ColorButton>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
           <Paper sx={{ width: '100' }}>

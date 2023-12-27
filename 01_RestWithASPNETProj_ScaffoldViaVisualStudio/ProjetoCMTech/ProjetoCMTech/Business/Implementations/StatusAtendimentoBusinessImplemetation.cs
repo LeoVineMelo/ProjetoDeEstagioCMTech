@@ -10,11 +10,11 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IStatusAtendimentoRepository _repository;
 
-        private readonly StatusAtendimentoCoverter _coverter;
+        private readonly StatusAtendimentoConverter _coverter;
         public StatusAtendimentoBusinessImplemetation(IStatusAtendimentoRepository repository)
         {
             _repository = repository;
-            _coverter = new StatusAtendimentoCoverter();
+            _coverter = new StatusAtendimentoConverter();
         }
        public List<StatusAtendimentoVO> FindAll()
         {

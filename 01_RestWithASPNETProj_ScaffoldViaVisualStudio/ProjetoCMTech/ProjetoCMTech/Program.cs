@@ -5,7 +5,6 @@ using ProjetoCMTech.Business.Implementations;
 using ProjetoCMTech.Repository;
 using ProjetoCMTech.Repository.Implementations;
 using Serilog;
-using EvolveDb;
 using ProjetoCMTech.Services;
 using ProjetoCMTech.Services.Implementations;
 using ProjetoCMTech.Configuration;
@@ -18,6 +17,12 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Rewrite;
+using ProjetoCMTech.Hubs;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +34,11 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(builder =>
     .AllowAnyMethod()
     .AllowAnyHeader();
 }));
+
+// configuration signalR
+
+builder.Services.AddSignalR();
+
 
 builder.Services.AddControllers();
 
@@ -78,7 +88,7 @@ builder.Services.AddAuthorization(auth =>
 
 // Adicionando suporte ao contexto via EF
 builder.Services.AddDbContext<PostgreSQLContext>(options =>
- options.UseNpgsql(connection, npgsqlOptions => npgsqlOptions.SetPostgresVersion(new Version("16.0.0"))));
+options.UseNpgsql(connection, npgsqlOptions => npgsqlOptions.SetPostgresVersion(new Version("16.0.1"))));
 
 //Versioning API
 builder.Services.AddApiVersioning();
@@ -98,6 +108,33 @@ builder.Services.AddSwaggerGen(c =>
 
             }
         });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description =
+            "JWT Authorization Header - utilizado com Bearer Authentication.\r\n\r\n" +
+            "Digite 'Bearer' [espaço] e então seu token no campo abaixo.\r\n\r\n" +
+            "Exemplo (informar sem as aspas): 'Bearer 12345abcdef'",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
 
 //Dependency Injection
@@ -147,10 +184,31 @@ var app = builder.Build();
 
 IWebHostEnvironment env = app.Environment;
 
+//
+using var scope = app.Services.CreateScope();
+
+var services = scope.ServiceProvider;
+
+try
+{
+    var context = services.GetRequiredService<PostgreSQLContext>();
+    context.ConnectionString = connection;
+    context.Database.SetCommandTimeout(600);
+    await context.Database.MigrateAsync();
+}
+catch (Exception ex)
+{
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    logger.LogError(ex, "Ocorreu um erro durante a Migration");
+}
+//
+
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateLogger();
 
+/*
 if (env.IsDevelopment())
 {
 	try
@@ -182,9 +240,9 @@ void MigrarBaseDeDados(string connection)
         Log.Error("Erro na migração da base de dados: ", ex);
         throw;
     }
+}*/
 
 // Configure the HTTP request pipeline.
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -197,14 +255,12 @@ if (app.Environment.IsDevelopment())
 var option = new RewriteOptions();
 option.AddRedirect("^$", "swagger");
 app.UseRewriter(option);
-
 app.UseHttpsRedirection();
-
 app.UseCors();
 
+//configuiresignalR
+app.MapHub<ChatHub>("/chat");
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
-}

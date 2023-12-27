@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\leona\\.nuget\\packages\\": {},
+    "C:\\Users\\flavi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leona\\OneDrive\\Área de Trabalho\\ProjetoEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\ProjetoCMTech.csproj",
+      "projectUniqueName": "C:\\Users\\flavi\\OneDrive\\Área de Trabalho\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech.csproj",
       "projectName": "ProjetoCMTech",
-      "projectPath": "C:\\Users\\leona\\OneDrive\\Área de Trabalho\\ProjetoEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\ProjetoCMTech.csproj",
-      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leona\\OneDrive\\Área de Trabalho\\ProjetoEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\obj\\",
+      "projectPath": "C:\\Users\\flavi\\OneDrive\\Área de Trabalho\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech.csproj",
+      "packagesPath": "C:\\Users\\flavi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\flavi\\OneDrive\\Área de Trabalho\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\flavi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

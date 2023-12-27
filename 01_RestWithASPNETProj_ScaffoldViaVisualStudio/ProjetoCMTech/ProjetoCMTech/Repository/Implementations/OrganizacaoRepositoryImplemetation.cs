@@ -1,4 +1,5 @@
-﻿using ProjetoCMTech.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
 using System;
 
@@ -15,7 +16,10 @@ namespace ProjetoCMTech.Repository.Implementations
        public List<Organizacao> FindAll()
         {
            
-            return _context.Organizacaos.ToList();
+            return _context.Organizacaos
+                .Include(x => x.Segmento)
+                .Include(x =>x.Grupo)
+                .ToList();
         }
 
 

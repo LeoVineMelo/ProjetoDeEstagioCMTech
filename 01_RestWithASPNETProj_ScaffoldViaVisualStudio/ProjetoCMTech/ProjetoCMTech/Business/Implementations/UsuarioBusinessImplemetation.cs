@@ -1,4 +1,5 @@
 ﻿using ProjetoCMTech.Data.Converter.Implementations;
+using ProjetoCMTech.Data.VO;
 using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
 using ProjetoCMTech.Repository;
@@ -10,19 +11,23 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IUsuarioRepository _repository;
 
-        private readonly UsuarioCoverter _coverter;
+        private readonly UsuarioConverter _coverter;
 
         public UsuarioBusinessImplemetation(IUsuarioRepository repository)
         {
             _repository = repository;
-            _coverter = new UsuarioCoverter();
+            _coverter = new UsuarioConverter();
         }
-       public List<UsuarioVO> FindAll()
+       public List<UsuarioVO> FindAll(UserPesquisaVO pesquisa = null)
         {
 
-            return _coverter.Parse(_repository.FindAll());
+            return _coverter.Parse(_repository.FindAll(pesquisa));
         }
 
+        public int FindAllCount(UserPesquisaVO pesquisa = null)
+        {
+            return _repository.FindAllCount(pesquisa);
+        }
         public UsuarioVO FindByID(long id) => _coverter.Parse(_repository.FindByID(id));
 
         public UsuarioVO Create(UsuarioVO usuario)

@@ -11,13 +11,13 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IOrganizacaoRepository _repository;
 
-        private readonly OrganizacaoCoverter _coverter;
+        private readonly OrganizacaoConverter _coverter;
 
         public OrganizacaoBusinessImplemetation(IOrganizacaoRepository repository)
         {
             _repository = repository;
 
-            _coverter = new OrganizacaoCoverter();
+            _coverter = new OrganizacaoConverter();
         }
        public List<OrganizacaoVO> FindAll()
         {

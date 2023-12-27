@@ -11,12 +11,12 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IPersonRepository _repository;
 
-        private readonly PersonCoverter _coverter;
+        private readonly PersonConverter _coverter;
 
         public PersonBusinessImplemetation(IPersonRepository repository)
         {
             _repository = repository;
-            _coverter = new PersonCoverter();
+            _coverter = new PersonConverter();
         }
        public List<PersonVO> FindAll()
         {

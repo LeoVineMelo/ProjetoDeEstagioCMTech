@@ -10,13 +10,13 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IPerfilRepository _repository;
 
-        private readonly PerfilCoverter _coverter;
+        private readonly PerfilConverter _coverter;
 
         public PerfilBusinessImplemetation(IPerfilRepository repository)
         {
             _repository = repository;
 
-            _coverter = new PerfilCoverter();
+            _coverter = new PerfilConverter();
         }
        public List<PerfilVO> FindAll()
         {

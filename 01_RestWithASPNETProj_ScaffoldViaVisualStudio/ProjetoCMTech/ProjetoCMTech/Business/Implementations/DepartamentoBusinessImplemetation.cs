@@ -10,12 +10,12 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IDepartamentoRepository _repository;
 
-        private readonly DepartamentoCoverter _coverter;
+        private readonly DepartamentoConverter _coverter;
 
         public DepartamentoBusinessImplemetation(IDepartamentoRepository repository)
         {
             _repository = repository;
-            _coverter = new DepartamentoCoverter();
+            _coverter = new DepartamentoConverter();
         }
        public List<DepartamentoVO> FindAll()
         {

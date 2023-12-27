@@ -1,4 +1,5 @@
-﻿using ProjetoCMTech.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
 using System;
 
@@ -15,12 +16,18 @@ namespace ProjetoCMTech.Repository.Implementations
        public List<Departamento> FindAll()
         {
            
-            return _context.Departamentos.ToList();
+            return _context.Departamentos
+                .Include(x => x.Organizacao)
+                .ToList();
         }
 
 
 
-        public Departamento FindByID(long id) => _context.Departamentos.SingleOrDefault(p => p.Id.Equals(id));
+        public Departamento FindByID(long id) {
+            return _context.Departamentos
+                .Include(x => x.Organizacao)
+                .SingleOrDefault(p => p.Id.Equals(id));
+        }
 
         public Departamento Create(Departamento departamento)
         {

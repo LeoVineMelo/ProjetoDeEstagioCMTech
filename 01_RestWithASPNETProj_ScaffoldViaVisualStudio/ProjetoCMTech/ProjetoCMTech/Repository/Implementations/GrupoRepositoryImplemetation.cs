@@ -1,4 +1,5 @@
-﻿using ProjetoCMTech.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoCMTech.Model;
 using ProjetoCMTech.Model.Context;
 using System;
 

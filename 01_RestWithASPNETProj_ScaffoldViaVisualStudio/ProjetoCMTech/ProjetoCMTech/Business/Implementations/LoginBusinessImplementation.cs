@@ -24,7 +24,7 @@ namespace ProjetoCMTech.Business.Implementations
             _tokenService = tokenService;
         }
 
-        public TokenVO ValidateCredentials(UsuarioVO usuarioCredentials)
+        public TokenVO ValidateCredentials(UsuarioLoginVO usuarioCredentials)
         {
             var usuario = _repository.ValidateCredentials(usuarioCredentials);
             if (usuario == null) return null;

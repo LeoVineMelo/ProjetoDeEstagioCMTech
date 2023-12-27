@@ -10,12 +10,12 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IGrupoRepository _repository;
 
-        private readonly GrupoCoverter _coverter;
+        private readonly GrupoConverter _coverter;
 
         public GrupoBusinessImplemetation(IGrupoRepository repository)
         {
             _repository = repository;
-            _coverter = new GrupoCoverter();
+            _coverter = new GrupoConverter();
         }
        public List<GrupoVO> FindAll()
         {

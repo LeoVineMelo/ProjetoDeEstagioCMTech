@@ -11,12 +11,12 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly IAtendimentoRepository _repository;
 
-        private readonly AtendimentoCoverter _coverter;
+        private readonly AtendimentoConverter _coverter;
 
         public AtendimentoBusinessImplemetation(IAtendimentoRepository repository)
         {
             _repository = repository;
-            _coverter = new AtendimentoCoverter();
+            _coverter = new AtendimentoConverter();
         }
        public List<AtendimentoVO> FindAll()
         {

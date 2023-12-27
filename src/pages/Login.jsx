@@ -45,6 +45,7 @@ export default function Login() {
             localStorage.setItem('accessToken', response.data.accessToken);
             navigate('/home')
         } catch (error) {
+            console.log(error);
             alert('erro de autenticação! tente novamente');
         }
 

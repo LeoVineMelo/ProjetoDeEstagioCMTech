@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "QW4NiZHGrQlp/nCEts/rvUJKAqpIjjZ3Tjnk6PrzR6g=",
+  "Hash": "xDEC+rCagTh5KRHaiDRvqeOBB6lpmOSRgoN7Ce1SGFM=",
   "Source": "ProjetoCMTech",
   "BasePath": "_content/ProjetoCMTech",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ProjetoCMTech\\wwwroot",
+      "Source": "ProjetoCMTech",
+      "ContentRoot": "C:\\Users\\leona\\OneDrive\\Área de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\wwwroot\\",
+      "BasePath": "_content/ProjetoCMTech",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

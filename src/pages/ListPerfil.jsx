@@ -32,9 +32,9 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 
 const columns = [
-  { id: 'id', name: 'Perfil' },
-  { id: 'id', name: 'Departamento' },
-  { id: 'id', name: 'Organização' }
+  { id: 'nome', name: 'Perfil' },
+  { id: 'actions', name: '' },
+  
 ];
 
 

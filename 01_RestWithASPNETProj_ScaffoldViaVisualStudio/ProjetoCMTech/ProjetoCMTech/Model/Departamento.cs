@@ -1,16 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoCMTech.Model
 {
-    [Table("departamento")]
+    
     public class Departamento
     {
-        [Column("id")]
+
         public long Id { get; set; }
-        [Column("organizacao_id")]
+        [ForeignKey("Organizacao")]
+
         public long OrganizacaoId { get; set; }
-        [Column("nome")]
+        public Organizacao Organizacao { get; set; }
+
         public string Nome { get; set; }
+
+        public IEnumerable<Atendimento> Atendimentos { get; set; }
+
+        public IEnumerable<Usuario> Usuarios { get; set; }
 
     }
 }

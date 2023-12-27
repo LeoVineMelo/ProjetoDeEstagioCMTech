@@ -9,6 +9,7 @@ namespace ProjetoCMTech.Model
         public long Id { get; set; }
 
         public long OrganizacaoId { get; set; }
+        public OrganizacaoVO Organizacao { get; set; }
 
         public string Nome { get; set; }
 

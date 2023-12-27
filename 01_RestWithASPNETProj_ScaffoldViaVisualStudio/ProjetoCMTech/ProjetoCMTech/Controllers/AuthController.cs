@@ -19,11 +19,8 @@ namespace ProjetoCMTech.Controllers
         }
 
         [HttpPost]
-       
-
         [Route("signin")]
-
-        public IActionResult Signin([FromBody]UsuarioVO usuario)
+        public IActionResult Signin([FromBody] UsuarioLoginVO usuario)
         {
             if (usuario == null) return BadRequest("requerimento de cliente inválido");
             

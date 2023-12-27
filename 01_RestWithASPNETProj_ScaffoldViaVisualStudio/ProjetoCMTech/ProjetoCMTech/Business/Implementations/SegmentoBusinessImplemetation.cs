@@ -11,13 +11,13 @@ namespace ProjetoCMTech.Business.Implementations
     {
         private readonly ISegmentoRepository _repository;
 
-        private readonly SegmentoCoverter _coverter;
+        private readonly SegmentoConverter _coverter;
 
         public SegmentoBusinessImplemetation(ISegmentoRepository repository)
         {
             _repository = repository;
 
-            _coverter = new SegmentoCoverter();
+            _coverter = new SegmentoConverter();
         }
        public List<SegmentoVO> FindAll()
         {
