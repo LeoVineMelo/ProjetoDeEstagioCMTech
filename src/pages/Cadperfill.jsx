@@ -2,18 +2,19 @@ import React, {useState} from 'react'
 import Navbar from '../components/basicos/Navbar'
 import { Avatar, Box, Grid } from '@mui/material';
 import User from '../components/basicos/User';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 import '../components/basicos/Navbar.css'
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import api from '../services/api';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
-
+import { useEffect } from 'react';
 
 
 import { purple } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
+import { Token } from '@mui/icons-material';
 
 
 const ColorButton1 = styled(Button)(({ theme }) => ({
@@ -83,12 +84,39 @@ const departamento = [
 
 export default function CadPerfill() {
 
+  const [id, setId] = useState(null)
   const [nomePerfil, setNomePerfil] = useState('');
   const [nomeDepartamento, setNomeDepartamento] = useState('');
   const [nomeOrganizacao, setNomeOrganizacao] = useState('');
 
+  const {perfilId} = useParams();
+
+  const accessToken = localStorage.getItem('accessToken');
+
+  const authorization = {
+    Headers:{
+      Authorization: `Bearer ${accessToken}`
+    }
+  }
+
   const navigate = useNavigate()
 
+  useEffect(() => {
+    if(perfilId === '0') return;
+    else loadPerfil();
+  }, perfilId);
+
+  async function loadPerfil() {
+    try {
+      const response = await api.get(`api/perfil/v1/${perfilId}`, authorization)
+
+      setId(response.data.id);
+      setNomePerfil(response.data.nome);
+    } catch (error) {
+      alert('Erro de carregamento, tente novamente')
+      navigate('/listperfil')
+    }
+  }
 
   async function CreateNewPerfil(e) {
     e.preventDefault();

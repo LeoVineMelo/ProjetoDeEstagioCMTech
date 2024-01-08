@@ -16,6 +16,9 @@ import { type } from '@testing-library/user-event/dist/type';
 import api from '../services/api';
 import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
+import { Token } from '@mui/icons-material';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 
 
 const ColorButton = styled(Button)(({ theme }) => ({
@@ -31,16 +34,17 @@ const ColorButton = styled(Button)(({ theme }) => ({
 }));
 
 
-const columns = [
-  { id: 'nome', name: 'Perfil' },
-  { id: 'actions', name: '' },
-  
-];
+
 
 
 
 export default function ListPerfil() {
 
+  const columns = [
+    { id: 'nome', name: 'Perfil' },
+    { id: ' ', name: ' ' },
+    { id: '', name: ' ' },
+  ];
   const handlechangepage = (event, newpage) => {
     pageChange(newpage)
   }
@@ -54,9 +58,17 @@ export default function ListPerfil() {
   const [page, pageChange] = useState(0);
   const [rowPerPage, rowPerPageChange] = useState(5);
 
+ 
+  const accessToken = localStorage.getItem('Token');
+
+  const authorization = {
+    Headers: {
+      Authorization: `Bearer ${accessToken}`
+    }
+  }
 
   useEffect(() => {
-    fetch("https://localhost:44300/api/Usuario/v1").then(resp => {
+    fetch("https://localhost:44300/api/Perfil/v1").then(resp => {
       return resp.json();
     }).then(resp => {
       rowChange(resp);
@@ -67,52 +79,48 @@ export default function ListPerfil() {
 
 
 
+ const [id, setId] = useState(null);
   const [perfil, setPerfil] = useState([]);
-  const [departamento, setDepartamento] = useState([]);
-  const [organizacao, setOrganizacao] = useState([]);
+  const nomeUsuario = localStorage.getItem('nome.usuario');
 
-  useEffect(() => {
-    api.get('api/perfil/v1/asc', {
-      headers: {
-
-      }
-    }).then(response => {
-      setPerfil(response.data)
-    })
-
-  });
-
-
-  useEffect(() => {
-    api.get('api/departamento/v1/asc', {
-      headers: {
-
-      }
-    }).then(response => {
-      setDepartamento(response.data)
-    })
-
-  });
-
-
-  useEffect(() => {
-    api.get('api/organizacao/v1/asc', {
-      headers: {
-
-      }
-    }).then(response => {
-      setOrganizacao(response.data)
-    })
-
-  });
-
+  /*
+    useEffect(() => {
+      api.get('api/perfil/v1/asc/5/1', {
+            headers: {
+              Authorization: `Bearer ${Token}`
+            }
+      }).then(Response => {
+          setPerfil(Response.data.list)
+      })
+    }, [Token]);
+  */
+ async function deletePerfil(id){
+     try {
+       await api.delete(`api/Perfil/v1/${id}`, {
+         headers: {
+           authorization: `Bearer ${accessToken}`
+         }
+       });
+     } catch (error) {
+       alert('A deleção falhou, tente novamente.');
+     }
+   }
 
   const navigate = useNavigate()
 
-  const cadperfill = (e) => {
+
+  async function editPerfil(id){
+      try {
+        navigate(`cadperfil/${id}`)
+      } catch (error) {
+        alert('A edição falhou, tente novamente.');
+      }
+    }
+
+  const cadperfil = (e) => {
     e.preventDefault()
 
-    navigate('/cadperfill')
+    navigate('/cadperfil')
   }
 
   const operacoes = (e) => {
@@ -125,10 +133,10 @@ export default function ListPerfil() {
     <Navbar>
       <Grid container spacing={2}>
         <Grid display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
-          <Button style={{color:'lightgrey'}} variant="text" onClick={operacoes}><ArrowBackIosIcon /> Voltar</Button>
+          <Button style={{ color: 'lightgrey' }} variant="text" onClick={operacoes}><ArrowBackIosIcon /> Voltar</Button>
         </Grid>
         <Grid justifyContent={'flex-end'} display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
-          <ColorButton variant="contained" onClick={cadperfill}>Adicionar</ColorButton>
+          <ColorButton variant="contained" onClick={cadperfil / 0}>Adicionar</ColorButton>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
           <Paper sx={{ width: '100' }}>
@@ -139,6 +147,7 @@ export default function ListPerfil() {
                     {columns.map((column) => (
                       <TableCell style={{ color: 'lightgrey' }} key={column.id}>{column.name}</TableCell>
                     ))}
+                    <TableCell style={{ color: 'lightgrey' }}>  </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -149,12 +158,21 @@ export default function ListPerfil() {
                         <TableRow key={i}>
                           {columns && columns.map((column, i) => {
                             let value = row[column.id];
+
                             return (
                               <TableCell style={{ backgroundColor: 'lightgrey', color: 'black' }} key={value}>
-                                {value}
+                                {value} 
                               </TableCell>
                             )
                           })}
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>
+                            <Button onClick={()=> editPerfil(perfil.id)}>
+                              <ModeEditOutlineIcon style={{color: 'grey'}}></ModeEditOutlineIcon>
+                            </Button>
+                            <Button onClick={()=> deletePerfil(perfil.id)}>
+                              <DeleteOutlinedIcon style={{color: 'grey'}}></DeleteOutlinedIcon>
+                            </Button>
+                          </TableCell>
                         </TableRow>
                       )
                     })}

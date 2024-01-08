@@ -28,11 +28,15 @@ import HeadsetMicRoundedIcon from '@mui/icons-material/HeadsetMicRounded';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { deepPurple } from '@mui/material/colors';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
+import PopoverU from './PopoverU';
 
 
 import SubscriptIcon from '@mui/icons-material/Subscript';
 import User from './User';
+
+
 
 const drawerWidth = 140;
 
@@ -106,11 +110,7 @@ export default function PersistentDrawerLeft({ children }) {
 
         navigate('/home')
     }
-    const trocarsenha = (e) => {
-        e.preventDefault()
-
-        navigate('/trocarsenha')
-    }
+   
 
 
     const operacoes = (e) => {
@@ -167,7 +167,7 @@ export default function PersistentDrawerLeft({ children }) {
                             </strong>
                         </Typography>
                         <IconButton display={'flex'} className='Avat'>
-                            <Avatar sx={{ backgroundColor: deepPurple[500] }}></Avatar>
+                            <Avatar> <PopoverU/></Avatar> 
                         </IconButton>
                     </Grid>
                 </Toolbar>
@@ -215,7 +215,7 @@ export default function PersistentDrawerLeft({ children }) {
                     </ListItem>
                     <ListItem className='Bottao Navbar-Menu-Item'>
                         <ListItemButton>
-                            <ListItemIcon sx={{ color: deepPurple[200], justifyContent: 'center', display: 'flex' }} onClick={cadastros}>
+                            <ListItemIcon sx={{ color: deepPurple[200], justifyContent: 'center', display: 'flex' }} onClick={relatendimentos} >
                                 <HistoryToggleOffOutlinedIcon sx={{ fontSize: 30 }} />
                             </ListItemIcon>
                             <ListItemText />
@@ -232,7 +232,7 @@ export default function PersistentDrawerLeft({ children }) {
                     <ListItem className='Bottao Navbar-Menu-Item'>
                         <ListItemButton>
                             <ListItemIcon sx={{ color: deepPurple[200], justifyContent: 'center', display: 'flex' }}>
-                                <HeadsetMicRoundedIcon sx={{ fontSize: 30 }} onClick={relatendimentos} />
+                                <HeadsetMicRoundedIcon sx={{ fontSize: 30 }} onClick={cadastros} />
                             </ListItemIcon>
                             <ListItemText />
                         </ListItemButton>
@@ -240,7 +240,7 @@ export default function PersistentDrawerLeft({ children }) {
                     <ListItem className='Bottao Navbar-Menu-Item'>
                         <ListItemButton>
                             <ListItemIcon sx={{ color: deepPurple[200], justifyContent: 'center', display: 'flex' }}>
-                                <SettingsOutlinedIcon sx={{ fontSize: 30 }} onClick={trocarsenha} />
+                                <SettingsOutlinedIcon sx={{ fontSize: 30 }} />
                             </ListItemIcon>
                             <ListItemText />
                         </ListItemButton>

@@ -16,6 +16,9 @@ import { type } from '@testing-library/user-event/dist/type';
 import api from '../services/api';
 import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
+
 
 
 const ColorButton = styled(Button)(({ theme }) => ({
@@ -32,10 +35,10 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 
 const columns = [
-  { id: 'id', name: 'Organização' },
-  { id: 'id', name: 'Telefone' },
-  { id: 'id', name: 'Segmento' },
-  { id: 'id', name: 'Grupo' }
+  { id: 'nome', name: 'Organização' },
+  { id: 'telefone', name: 'Telefone' },
+  { id: 'segmento_id', name: 'Segmento' },
+  { id: 'grupo_id', name: 'Grupo' }
 ];
 
 
@@ -67,12 +70,12 @@ export default function ListPerfil() {
   }, [])
 
 
-
+  const [id, setId] = useState(null);
   const [perfil, setPerfil] = useState([]);
   const [departamento, setDepartamento] = useState([]);
   const [organizacao, setOrganizacao] = useState([]);
 
-  useEffect(() => {
+ /* useEffect(() => {
     api.get('api/perfil/v1/asc', {
       headers: {
 
@@ -107,8 +110,32 @@ export default function ListPerfil() {
 
   });
 
+  /* async function deleteOganizacao(id){
+    try {
+      await api.delete(`api/Oganizacao/v1/${id}`, {
+        headers: {
+          authorization: `Bearer ${accessToken}`
+        }
+      });
+    } catch (error) {
+      alert('A deleção falhou, tente novamente.');
+    }
+  }*/
+
+  //botão de deleção : <button onClick={()=> deleteOganizacao(oganizacao.id)}
+
 
   const navigate = useNavigate()
+
+   /*async function editOganizacao(id){
+    try {
+      navigate(`cadastrodeorganizacao/${id}`)
+    } catch (error) {
+      alert('A edição falhou, tente novamente.');
+    }
+  }*/
+
+  //botão de edição : <button onClick={()=> editOganizacao(oganizacao.id)}
 
   const cadastrodeorganizacao = (e) => {
     e.preventDefault()
@@ -129,7 +156,7 @@ export default function ListPerfil() {
           <Button style={{color:'lightgrey'}} variant="text" onClick={operacoes}><ArrowBackIosIcon /> Voltar</Button>
         </Grid>
         <Grid justifyContent={'flex-end'} display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
-          <ColorButton variant="contained" onClick={cadastrodeorganizacao}>Adicionar</ColorButton>
+          <ColorButton variant="contained" onClick={cadastrodeorganizacao/0}>Adicionar</ColorButton>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
           <Paper sx={{ width: '100' }}>
@@ -156,6 +183,14 @@ export default function ListPerfil() {
                               </TableCell>
                             )
                           })}
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>
+                            <Button >
+                              <ModeEditOutlineIcon style={{color: 'grey'}}></ModeEditOutlineIcon>
+                            </Button>
+                            <Button >
+                              <DeleteOutlinedIcon style={{color: 'grey'}}></DeleteOutlinedIcon>
+                            </Button>
+                          </TableCell>
                         </TableRow>
                       )
                     })}

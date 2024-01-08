@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
     const loggedUsuario = {
       id: usuario.id,
-      name: usuario.name,
+      nome: usuario.nome,
       email: usuario.email,
       perfil: usuario.perfil
     }

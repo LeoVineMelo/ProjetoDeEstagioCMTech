@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 import TextField from '@mui/material/TextField';
 import Card from '../components/layout/Card';
@@ -17,6 +17,9 @@ import User from '../components/basicos/User';
 import api from '../services/api';
 import { purple } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 
 const ColorButton1 = styled(Button)(({ theme }) => ({
@@ -52,7 +55,56 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-export default function AutoGrid() {
+
+
+
+export default function CadastroDeOrganizacao() {
+
+const [id, setId] = useState(null);
+const [idSegmento, setIdSegmento] = useState('');
+const [idGrupo, setidGrupo] = useState('');
+const [nomeOrganizacao, setNomeOrganizacao] = useState('');
+const [telefone, setTelefone] = useState('');
+
+const {organizacaoId} = useParams();
+
+const accessToken = localStorage.getItem('accessToken');
+
+  const authorization = {
+    Headers:{
+      Authorization: `Bearer ${accessToken}`
+    }
+  }
+
+const navigate = useNavigate()
+
+  useEffect(() => {
+    if(organizacaoId === '0') return;
+    else loadOrganizacao();
+  }, organizacaoId);
+
+  async function loadOrganizacao() {
+    try {
+      const response = await api.get(`api/organizacao/v1/${organizacaoId}`, authorization)
+
+      setId(response.data.id);
+      setNomeOrganizacao(response.data.nome);
+    } catch (error) {
+      alert('Erro de carregamento, tente novamente')
+      navigate('/listorganizacao')
+    }
+  }
+
+
+
+
+
+const listorganizacao = (e) => {
+    e.preventDefault()
+
+    navigate('/listorganizacao')
+}
+
     return (
         <Navbar>
         
@@ -60,10 +112,7 @@ export default function AutoGrid() {
                 <Grid container spacing={2}>
 
                     <Grid className='Exit' justifyContent={'end'} display={'flex'} item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <button type="button" class="close" aria-label="Close">
-                            <CloseIcon></CloseIcon>
-                        </button>
-
+                        
                     </Grid>
 
                     
@@ -89,7 +138,7 @@ export default function AutoGrid() {
                     </Grid>
 
                     <Grid justifyContent={'flex-end'} display={'flex'} item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <ColorButton1 className='BotaoCancelar' variant="contained">
+                        <ColorButton1 onClick={listorganizacao} className='BotaoCancelar' variant="contained">
                             Cancelar
                         </ColorButton1>
 

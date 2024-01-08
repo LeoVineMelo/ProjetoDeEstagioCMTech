@@ -2,13 +2,14 @@ import React, {useState} from 'react'
 import Navbar from '../components/basicos/Navbar'
 import { Avatar, Box, Grid } from '@mui/material';
 import User from '../components/basicos/User';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 import '../components/basicos/Navbar.css'
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import api from '../services/api';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import { useEffect } from 'react';
 
 
 import { purple } from '@mui/material/colors';
@@ -80,11 +81,40 @@ const departamento = [
 ];
 
 
-export default function CadPerfill() {
+export default function CadDepartamento() {
 
+  const [id, setId] = useState(null);
   const [nomePerfil, setNomePerfil] = useState('');
   const [nomeDepartamento, setNomeDepartamento] = useState('');
   const [nomeOrganizacao, setNomeOrganizacao] = useState('');
+
+  const {departamentoId} = useParams();
+
+
+  const accessToken = localStorage.getItem('accessToken');
+
+  const authorization = {
+    Headers:{
+      Authorization: `Bearer ${accessToken}`
+    }
+  }
+
+  useEffect(() => {
+    if(departamentoId === '0') return;
+    else loadDepartamento();
+  }, departamentoId);
+
+  async function loadDepartamento() {
+    try {
+      const response = await api.get(`api/departamento/v1/${departamentoId}`, authorization)
+
+      setId(response.data.id);
+      setNomePerfil(response.data.nome);
+    } catch (error) {
+      alert('Erro de carregamento, tente novamente')
+      navigate('/listdepartamento')
+    }
+  }
 
   const navigate = useNavigate()
 
@@ -96,10 +126,10 @@ export default function CadPerfill() {
   
 
 
-  const listperfil = (e) =>{
+  const listDepartamento = (e) =>{
     e.preventDefault()
 
-    navigate('/listperfil')
+    navigate('/listdepartamento')
 }
 
   return (
@@ -144,11 +174,11 @@ export default function CadPerfill() {
           </TextField>
         </Grid >
         <Grid justifyContent={'center'} item xs={12} sm={12} md={12} lg={12} xl={12}display={'flex'}>
-          <ColorButton1 className='BotaoCancelar' variant="contained"  display={'flex'} onClick={listperfil}>
+          <ColorButton1 className='BotaoCancelar' variant="contained"  display={'flex'} onClick={listDepartamento}>
             Cancelar
           </ColorButton1>
        
-        <ColorButton className='BotaoSalvar' variant="contained" onClick={listperfil} >
+        <ColorButton className='BotaoSalvar' variant="contained" onClick={listDepartamento} >
                            Salvar
                         </ColorButton>
         </Grid>

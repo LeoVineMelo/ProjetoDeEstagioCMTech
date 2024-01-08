@@ -21,6 +21,8 @@ import RelAtendimentos from './pages/RelAtendimentos';
 import CadastroDeOrganizacao from './pages/CadastroDeOrganizacao';
 import CadDepartamento from './pages/CadDepartamentos';
 
+
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -43,7 +45,7 @@ export const router = createBrowserRouter([
     element: <TrocarSenha/>
   },
   {
-    path: "cadperfill",
+    path: "cadperfil/:perfilId",
     element: <CadPerfill/>
   },
   {
@@ -87,11 +89,11 @@ export const router = createBrowserRouter([
     element: <RelAtendimentos/>
   },
   {
-    path: "cadastrodeorganizacao",
+    path: "cadastrodeorganizacao/:organizacaoId",
     element: <CadastroDeOrganizacao/>
   },
   {
-    path: "caddepartamento",
+    path: "caddepartamento/:departamentoId",
     element: <CadDepartamento/>
   },
 

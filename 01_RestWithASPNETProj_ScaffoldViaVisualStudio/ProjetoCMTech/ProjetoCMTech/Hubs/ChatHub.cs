@@ -9,7 +9,7 @@ using ProjetoCMTech.Model.Context;
 namespace ProjetoCMTech.Hubs
 {
     public class ChatHub : Hub
-    {
+    {   
         private readonly PostgreSQLContext _context;
         private readonly ChatAtendimentoConverter _coverter;
 

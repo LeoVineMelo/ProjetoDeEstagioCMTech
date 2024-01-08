@@ -6,14 +6,14 @@ namespace ProjetoCMTech.Model.Context
 {
     public class PostgreSQLContext:DbContext
     {
-        public string ConnectionString = "PostgreeConnection:PostgreeConnectionString";
+        private readonly IConfiguration _configuration;
         public PostgreSQLContext()
         {
 
         }
-        public PostgreSQLContext(DbContextOptions<PostgreSQLContext> options) : base(options)
+        public PostgreSQLContext(DbContextOptions<PostgreSQLContext> options, IConfiguration configuration) : base(options)
         {
-
+            _configuration = configuration;
         }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Atendimento> Atendimentos { get; set; }
@@ -308,7 +308,8 @@ namespace ProjetoCMTech.Model.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(ConnectionString, SqlOptions =>
+            var connectionString = _configuration.GetConnectionString("PostgreeConnectionString");
+            optionsBuilder.UseNpgsql(connectionString, SqlOptions =>
             {
                 SqlOptions.MigrationsHistoryTable("ef_migrations_history", "public");
                 SqlOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(150), null);

@@ -123,6 +123,7 @@ export default function ListUsuario() {
 
     Pesquisa()
   }
+  
 
   async function Pesquisa() {
 
@@ -168,6 +169,8 @@ export default function ListUsuario() {
 
     }
 
+    
+
   }
 
   /*const filteredRows = rows != null ? rows.filter(row => {
@@ -178,6 +181,22 @@ export default function ListUsuario() {
 
     return nomeFilter && cargoFilter && setorFilter;
   }) : rows;*/
+
+
+
+
+
+   /* async function deleteUsuario(id){
+    try {
+      await api.delete(`api/Usuario/v1/${id}`, {
+        headers: {
+          authorization: `Bearer ${accessToken}`
+        }
+      });
+    } catch (error) {
+      alert('A deleção falhou, tente novamente.');
+    }
+  }*/
 
 
   return (

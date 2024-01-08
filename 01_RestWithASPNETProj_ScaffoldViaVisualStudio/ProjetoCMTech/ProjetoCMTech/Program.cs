@@ -48,7 +48,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connection =builder.Configuration["PostgreeConnection:PostgreeConnectionString"];
+var connection =builder.Configuration["ConnectionStrings:PostgreeConnectionString"];
 
 var tokenconfigurations = new TokenConf();
 
@@ -192,7 +192,6 @@ var services = scope.ServiceProvider;
 try
 {
     var context = services.GetRequiredService<PostgreSQLContext>();
-    context.ConnectionString = connection;
     context.Database.SetCommandTimeout(600);
     await context.Database.MigrateAsync();
 }
@@ -207,40 +206,6 @@ catch (Exception ex)
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateLogger();
-
-/*
-if (env.IsDevelopment())
-{
-	try
-	{
-		if (connection != null)
-		    MigrarBaseDeDados(connection);
-        }
-	catch (Exception ex)
-	{
-		Log.Error("A string de conexão não pode ser nula: ", ex);
-		throw;
-	}
-}
- 
-void MigrarBaseDeDados(string connection)
-{
-    try
-    {
-        var envConnection = new Npgsql.NpgsqlConnection(connection);
-        var evolve = new Evolve(envConnection, msg => Log.Information(msg))
-        {
-            Locations = new List<string> { "db/migrations", "db/dataset" },
-            IsEraseDisabled = true,
-        };
-        evolve.Migrate();
-    }
-    catch (Exception ex)
-    {
-        Log.Error("Erro na migração da base de dados: ", ex);
-        throw;
-    }
-}*/
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -85,9 +85,13 @@
               "target": "Package",
               "version": "[7.0.3, )"
             },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[6.0.22, )"
+              "version": "[6.0.1, )"
             },
             "NuGet.CommandLine": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

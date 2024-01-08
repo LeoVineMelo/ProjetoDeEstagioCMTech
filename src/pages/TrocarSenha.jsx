@@ -44,7 +44,7 @@ export default function AutoGrid() {
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <TextField className='Text'
                             id="outlined-password-input"
-                            label="Password"
+                            label="Senha Atual"
                             type="password"
                             autoComplete="current-password"
                         />
@@ -53,7 +53,7 @@ export default function AutoGrid() {
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <TextField className='Text'
                             id="outlined-password-input"
-                            label="Password"
+                            label="Nova senha"
                             type="password"
                             autoComplete="current-password"
                         />
@@ -62,7 +62,7 @@ export default function AutoGrid() {
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <TextField className='Text'
                             id="outlined-password-input"
-                            label="Password"
+                            label="Confirme sua Nova senha"
                             type="password"
                             autoComplete="current-password"
                         />

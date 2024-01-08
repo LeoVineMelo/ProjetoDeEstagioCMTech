@@ -13,7 +13,9 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom'
 import api from '../services/api';
 import '../components/basicos/Navbar.css'
-
+import { MySnackbar } from '../components/MySnackbar';
+import { CircularProgress } from '@mui/material';
+import { purple } from '@mui/material/colors';
 
 
 
@@ -29,8 +31,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Login() {
 
-
-
+    
+ 
     async function login(e) {
         e.preventDefault();
 
@@ -53,6 +55,23 @@ export default function Login() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+
+    const [loading, setLoading] = React.useState(false);
+    const timer = React.useRef();
+
+    const [variant, setVariant] = React.useState('success');
+    const [message, setMessage] = React.useState('');
+    const [open, setOpen] = React.useState(false);
+
+    function openNotification(variant, message, open){
+		setVariant(variant);
+		setMessage(message);
+		setOpen(open);
+	}
+
+    function closeNotification(){
+		setOpen(false);
+	}
 
     const navigate = useNavigate();
 
@@ -108,6 +127,33 @@ export default function Login() {
                     </Grid>
                 </Grid>
             </Card>
-        </Box>
+
+        {loading && (
+            <div style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              background: '#000',
+              opacity: 0.7,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              zIndex: 2147483646
+            }}>
+              <CircularProgress size={68}
+                sx={{
+                color: purple
+                }} />
+            </div>
+          )}
+          <MySnackbar
+            variant={variant}
+            message={message}
+            isOpen={open}
+            toClose={closeNotification} 
+          />
+         </Box> 
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/basicos/Navbar'
 import { Grid, MenuItem, MenuList, Paper } from "@mui/material";
-import { Router, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
 import { AuthContext } from '../context/auth';
 import { HubConnectionBuilder } from '@microsoft/signalr';
@@ -11,6 +11,7 @@ import ChatWindow from '../components/ChatWindow';
 import CircularProgress from '@mui/material/CircularProgress';
 import { green } from '@mui/material/colors';
 import { MySnackbar } from '../components/MySnackbar';
+import { Link } from 'react-router-dom';
 
 function Chat() {
 
@@ -38,7 +39,7 @@ function Chat() {
 
   React.useEffect(() => {
 		const newConnection = new HubConnectionBuilder()
-			.withUrl('https://localhost:5001/chat')
+			.withUrl('https://localhost:44300/chat')
 			.withAutomaticReconnect()
 			.build();
 
@@ -96,8 +97,8 @@ function Chat() {
       }
       
       const authMeListenerSuccess = () => {
-        connection.on("authMeResponseSuccess", UsuarioVO => {
-          setSignalRId(UsuarioVO.signalrId)
+        connection.on("authMeResponseSuccess", usuarioVO => {
+          setSignalRId(usuarioVO.signalrId)
           getOnlineUsuarios()
         })
       }
@@ -213,7 +214,7 @@ function Chat() {
       <Grid display={'flex'} container spacing={4}>
         <Grid item xs={2} md={2} style={{padding: 10}}>
           <button variant="containerd">
-            <Router to={`/home`} style={{ color: '#FFF', textDecoration: 'none'}}>Voltar</Router>
+            <Link to={`/home`} style={{ color: '#FFF', textDecoration: 'none'}}>Voltar</Link>
           </button>
           </Grid>
           <Grid item xs={6} md={6} style={{padding: 10}}>
