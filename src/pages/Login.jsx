@@ -45,6 +45,7 @@ export default function Login() {
             const response = await api.post('api/Auth/v1/signin', data)
             localStorage.setItem('email', email);
             localStorage.setItem('accessToken', response.data.accessToken);
+            
             navigate('/home')
         } catch (error) {
             console.log(error);

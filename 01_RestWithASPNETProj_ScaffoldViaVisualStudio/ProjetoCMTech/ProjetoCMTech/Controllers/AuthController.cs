@@ -23,12 +23,16 @@ namespace ProjetoCMTech.Controllers
         public IActionResult Signin([FromBody] UsuarioLoginVO usuario)
         {
             if (usuario == null) return BadRequest("requerimento de cliente inválido");
-            
+
             var token = _loginBusiness.ValidateCredentials(usuario);
 
             if (token == null) return Unauthorized();
 
-            return Ok(token);
+            return Ok(new
+            {
+                usuario = usuario,
+                token = token
+            });
         }
     }
 }
