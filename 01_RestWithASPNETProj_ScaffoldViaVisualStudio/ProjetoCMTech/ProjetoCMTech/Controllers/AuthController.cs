@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProjetoCMTech.Business;
 using ProjetoCMTech.Data.VO;
 using ProjetoCMTech.Model;
+using ProjetoCMTech.Repository;
 
 namespace ProjetoCMTech.Controllers
 {
@@ -12,10 +13,12 @@ namespace ProjetoCMTech.Controllers
     public class AuthController : ControllerBase
     {
         private ILoginBusiness _loginBusiness;
+        private IUsuarioRepository _usuarioRepository;
 
-        public AuthController(ILoginBusiness loginBusiness)
+        public AuthController(ILoginBusiness loginBusiness, IUsuarioRepository usuarioRepository)
         {
             _loginBusiness = loginBusiness;
+            _usuarioRepository = usuarioRepository;
         }
 
         [HttpPost]
@@ -25,13 +28,10 @@ namespace ProjetoCMTech.Controllers
             if (usuario == null) return BadRequest("requerimento de cliente inválido");
 
             var token = _loginBusiness.ValidateCredentials(usuario);
-
             if (token == null) return Unauthorized();
-
             return Ok(new
             {
-                usuario = usuario,
-                token = token
+                credentials = token
             });
         }
     }

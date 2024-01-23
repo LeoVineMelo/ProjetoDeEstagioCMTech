@@ -1,8 +1,6 @@
-import * as React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React, { useContext } from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom/dist"
+import { AuthProvider, AuthContext } from "./context/auth";
 import Login from './pages/Login';
 import Home from "./pages/Home";
 import TrocarSenha from './pages/TrocarSenha';
@@ -20,82 +18,49 @@ import ListOrganizacao from './pages/ListOrganizacao';
 import RelAtendimentos from './pages/RelAtendimentos';
 import CadastroDeOrganizacao from './pages/CadastroDeOrganizacao';
 import CadDepartamento from './pages/CadDepartamentos';
+import ChatAtendimento from './pages/ChatAtendimento';
 
+const AppRoutes = () => {
 
+  const Private = ({ children }) => {
+    const { authenticated, loadingRoute } = useContext(AuthContext)
+    
+    if (loadingRoute)
+      return <div>carregando...</div>
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Login />
-  },
-  {
-    path: "/login",
-    element: <Login />
-  },
-  {
-    path: "home",
-    element: <Home />,
-  },
-  {
-    path: "recuperarsenha",
-    element: <RecuperarSenha/>
-  },
-  {
-    path: "trocarsenha",
-    element: <TrocarSenha/>
-  },
-  {
-    path: "cadperfil/:perfilId",
-    element: <CadPerfill/>
-  },
-  {
-    path: "operacoes",
-    element: <Operacoes/>
-  },
-  {
-    path: "listperfil",
-    element: <ListPerfil/>
-  },
-  {
-    path: "listusuario",
-    element: <ListUsuario/>
-  },
-  {
-    path: "cadastros",
-    element: <Cadastros/>
-  },
-  {
-    path: "cadastrodeusuario",
-    element: <CadastroDeUsuario/>
-  },
-  {
-    path: "cadastrodecliente",
-    element: <CadastroDeCliente/>
-  },
-  {
-    path: "atendimento",
-    element: <Atendimento/>
-  },
-  {
-    path: "listdepartamento",
-    element: <ListDepartamento/>
-  },
-  {
-    path: "listorganizacao",
-    element: <ListOrganizacao/>
-  },
-  {
-    path: "relatendimentos",
-    element: <RelAtendimentos/>
-  },
-  {
-    path: "cadastrodeorganizacao/:organizacaoId",
-    element: <CadastroDeOrganizacao/>
-  },
-  {
-    path: "caddepartamento/:departamentoId",
-    element: <CadDepartamento/>
-  },
+    if (!authenticated)
+      return <Navigate to="/login" />
+    else
+      return children
+  }
 
+  return(
+    <Router>
+      <AuthProvider>
+        <Routes>
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/home" element={<Private><Home /></Private>} />
+          <Route exact path="/recuperarsenha" element={<Private><RecuperarSenha /></Private>} />
+          <Route exact path="/trocarsenha" element={<Private><TrocarSenha /></Private>} />
+          <Route exact path="/cadperfil/:perfilId" element={<Private><CadPerfill /></Private>} />
+          <Route exact path="/operacoes" element={<Private><Operacoes /></Private>} />
+          <Route exact path="/listperfil" element={<Private><ListPerfil /></Private>} />
+          <Route exact path="/listusuario" element={<Private><ListUsuario /></Private>} />
+          <Route exact path="/cadastros" element={<Private><Cadastros /></Private>} />
+          <Route exact path="/cadastrodeusuario" element={<Private><CadastroDeUsuario /></Private>} />
+          <Route exact path="/cadastrodecliente" element={<Private><CadastroDeCliente /></Private>} />
+          <Route exact path="/chatatendimento" element={<Private><ChatAtendimento /></Private>} />
+          <Route exact path="/atendimento" element={<Private><Atendimento /></Private>} />
+          <Route exact path="/listdepartamento" element={<Private><ListDepartamento /></Private>} />
+          <Route exact path="/listorganizacao" element={<Private><ListOrganizacao /></Private>} />
+          <Route exact path="/relatendimentos" element={<Private><RelAtendimentos /></Private>} />
+          <Route exact path="/cadastrodeorganizacao/:organizacaoId" element={<Private><CadastroDeOrganizacao /></Private>} />
+          <Route exact path="/caddepartamento/:departamentoId" element={<Private><CadDepartamento /></Private>} />
+        </Routes>
+      </AuthProvider>
+    </Router>
+  )
+}
 
-]);
+export default AppRoutes

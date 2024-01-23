@@ -159,9 +159,6 @@ builder.Services.AddScoped<IOrganizacaoRepository, OrganizacaoRepositoryImplemet
 builder.Services.AddScoped<IPerfilBusiness, PerfilBusinessImplemetation>();
 builder.Services.AddScoped<IPerfilRepository, PerfilRepositoryImplemetation>();
 
-builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplemetation>();
-builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplemetation>();
-
 builder.Services.AddScoped<ISegmentoBusiness, SegmentoBusinessImplemetation>();
 builder.Services.AddScoped<ISegmentoRepository, SegmentoRepositoryImplemetation>();
 

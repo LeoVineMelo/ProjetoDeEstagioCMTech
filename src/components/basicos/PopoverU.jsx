@@ -8,6 +8,7 @@ import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import { Login } from '@mui/icons-material';
+import { AuthContext } from '../../context/auth';
 
 
 
@@ -24,6 +25,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 export default function BasicPopover() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const { logout } = React.useContext(AuthContext);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -45,10 +47,10 @@ export default function BasicPopover() {
 
   }
 
-  const login = (e) => {
+  const handleLogout = (e) => {
     e.preventDefault()
 
-    navigate('/login')
+    logout()
   }
 
   return (
@@ -66,7 +68,7 @@ export default function BasicPopover() {
           horizontal: 'left',
         }}
       >
-        <ColorButton onClick={login} >
+        <ColorButton onClick={handleLogout} >
           Deslogar
         </ColorButton>
 

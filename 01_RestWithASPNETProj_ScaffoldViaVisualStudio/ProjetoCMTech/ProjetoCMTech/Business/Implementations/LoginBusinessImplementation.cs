@@ -1,4 +1,5 @@
 ﻿using ProjetoCMTech.Configuration;
+using ProjetoCMTech.Data.Converter.Implementations;
 using ProjetoCMTech.Data.VO;
 using ProjetoCMTech.Model;
 using ProjetoCMTech.Repository;
@@ -16,12 +17,14 @@ namespace ProjetoCMTech.Business.Implementations
 
         private IUsuarioRepository _repository;
         private readonly ITokenService _tokenService;
+        private readonly UsuarioConverter _converter;
 
         public LoginBusinessImplementation(TokenConf conf, IUsuarioRepository repository, ITokenService tokenService)
         {
             _conf = conf;
             _repository = repository;
             _tokenService = tokenService;
+            _converter = new UsuarioConverter();
         }
 
         public TokenVO ValidateCredentials(UsuarioLoginVO usuarioCredentials)
@@ -40,12 +43,14 @@ namespace ProjetoCMTech.Business.Implementations
             DateTime createDate = DateTime.Now;
             DateTime expirationDate = createDate.AddMinutes(_conf.Minutes);
 
+            var usuarioVO = _converter.Parse(usuario);
 
             return new TokenVO(
                 true,
                 createDate.ToString(DATE_FORMAT)
                 , expirationDate.ToString(DATE_FORMAT),
-                accessToken
+                accessToken,
+                usuarioVO
                
                 );
         }

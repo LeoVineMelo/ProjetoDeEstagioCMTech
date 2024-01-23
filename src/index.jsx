@@ -1,15 +1,12 @@
 import './index.css'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import React from 'react'
-import { RouterProvider } from 'react-router-dom'
-import { router } from './routes'
-import AuthContext from './context/auth'
+import AppRoutes from './routes'
+import Login from './pages/Login'
 
-ReactDOM.render(
-    <AuthContext.Provider value={{signed: true}}>
+ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>,
-    </AuthContext.Provider>,
-    document.getElementById('root')
-)
+      <AppRoutes />
+    </React.StrictMode>
+  )
+  

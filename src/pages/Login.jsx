@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -16,7 +16,7 @@ import '../components/basicos/Navbar.css'
 import { MySnackbar } from '../components/MySnackbar';
 import { CircularProgress } from '@mui/material';
 import { purple } from '@mui/material/colors';
-
+import { AuthContext } from '../context/auth';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -31,9 +31,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Login() {
 
-    
+    //const context = React.useContext(AuthContext);
  
-    async function login(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         const data = {
@@ -44,16 +44,15 @@ export default function Login() {
         try {
             const response = await api.post('api/Auth/v1/signin', data)
             localStorage.setItem('email', email);
-            localStorage.setItem('accessToken', response.data.accessToken);
+            login(response.data.credentials.usuario, response.data.credentials.accessToken)
             
-            navigate('/home')
         } catch (error) {
             console.log(error);
             alert('erro de autenticação! tente novamente');
         }
 
     }
-
+    const { login } = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
@@ -89,7 +88,7 @@ export default function Login() {
                     <Grid className='CorFont' item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <h1><strong>Acesso</strong></h1>
                     </Grid>
-                    <form className='format' onSubmit={login}>
+                    <form className='format' onSubmit={handleSubmit}>
                         <Grid padding={2} item xs={12} sm={12} md={12} lg={12} xl={12}>
                             <TextField className='Text'
                                 placeholder='Email'
@@ -114,7 +113,7 @@ export default function Login() {
                         </Grid>
 
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                            <Button className='Botaoo' variant="contained" onClick={login}>Entrar</Button>
+                            <Button className='Botaoo' variant="contained" onClick={handleSubmit}>Entrar</Button>
                         </Grid>
                     </form>
                     <Grid paddingRight={30} justifyContent={'flex-end'} display={'flex'} item xs={12} sm={12} md={12} lg={12} xl={12}>

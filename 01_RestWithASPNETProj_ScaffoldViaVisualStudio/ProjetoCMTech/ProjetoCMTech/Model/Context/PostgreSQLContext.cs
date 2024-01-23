@@ -15,7 +15,7 @@ namespace ProjetoCMTech.Model.Context
         {
             _configuration = configuration;
         }
-        public DbSet<Person> Persons { get; set; }
+       
         public DbSet<Atendimento> Atendimentos { get; set; }
         public DbSet<ChatAtendimento> ChatAtendimentos { get; set; }
         public DbSet<Departamento> Departamentos { get; set; }

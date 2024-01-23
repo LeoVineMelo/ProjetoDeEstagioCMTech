@@ -35,6 +35,7 @@ import PopoverU from './PopoverU';
 
 import SubscriptIcon from '@mui/icons-material/Subscript';
 import User from './User';
+import { AuthContext } from '../../context/auth';
 
 
 
@@ -88,6 +89,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function PersistentDrawerLeft({ children }) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const { usuario } = React.useContext(AuthContext)
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -161,8 +163,7 @@ export default function PersistentDrawerLeft({ children }) {
                         <Typography className='User'>
                             <strong>
                                 <User user={{
-                                    FirstName: 'Leonardo',
-                                    LastName: 'Melo'
+                                    FirstName: usuario.nome
                                 }} />
                             </strong>
                         </Typography>
