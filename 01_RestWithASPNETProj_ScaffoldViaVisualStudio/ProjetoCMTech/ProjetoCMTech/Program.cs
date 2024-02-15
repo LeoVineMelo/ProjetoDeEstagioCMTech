@@ -20,9 +20,7 @@ using Microsoft.AspNetCore.Rewrite;
 using ProjetoCMTech.Hubs;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-
-
-
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +36,26 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(builder =>
 // configuration signalR
 
 builder.Services.AddSignalR();
+
+builder.Services.AddCors(config =>
+{
+    var policy = new CorsPolicy();
+    policy.Headers.Add("*");
+    policy.Methods.Add("*");
+    policy.Origins.Add("*");
+    policy.SupportsCredentials = true;
+    config.AddPolicy("policy", policy);
+});
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ClientPermission", policy =>
+    {
+        policy.AllowAnyHeader()
+            .AllowAnyMethod()
+            .WithOrigins("http://localhost:3000")
+            .AllowCredentials();
+    });
+});
 
 
 builder.Services.AddControllers();
@@ -85,6 +103,8 @@ builder.Services.AddAuthorization(auth =>
         .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
         .RequireAuthenticatedUser().Build());
 });
+
+
 
 // Adicionando suporte ao contexto via EF
 builder.Services.AddDbContext<PostgreSQLContext>(options =>
@@ -218,7 +238,7 @@ var option = new RewriteOptions();
 option.AddRedirect("^$", "swagger");
 app.UseRewriter(option);
 app.UseHttpsRedirection();
-app.UseCors();
+app.UseCors("ClientPermission");
 
 //configuiresignalR
 app.MapHub<ChatHub>("/chat");

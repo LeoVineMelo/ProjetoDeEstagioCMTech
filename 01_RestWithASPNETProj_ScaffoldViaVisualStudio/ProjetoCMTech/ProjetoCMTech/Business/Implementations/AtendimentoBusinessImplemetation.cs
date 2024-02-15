@@ -18,10 +18,15 @@ namespace ProjetoCMTech.Business.Implementations
             _repository = repository;
             _coverter = new AtendimentoConverter();
         }
-       public List<AtendimentoVO> FindAll()
+       public List<AtendimentoVO> FindAll(AtendimentoPesquisaVO pesquisa = null)
         {
 
-            return _coverter.Parse(_repository.FindAll());
+            return _coverter.Parse(_repository.FindAll(pesquisa));
+        }
+
+        public int FindAllCount(AtendimentoPesquisaVO pesquisa = null)
+        {
+            return _repository.FindAllCount(pesquisa);
         }
 
         public AtendimentoVO FindByID(long id) => _coverter.Parse(_repository.FindByID(id));

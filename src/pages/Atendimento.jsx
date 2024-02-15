@@ -493,7 +493,6 @@ function Chat() {
                 <Grid item xs={12} md={12} style={{ padding: 10, borderRadius: '30px', backgroundColor: 'purple' }}>
                   <TextField
                     fullWidth
-
                     id="message"
                     name="message"
                     label="Mensagem"

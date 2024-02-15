@@ -135,7 +135,7 @@ namespace ProjetoCMTech.Repository.Implementations
         {
             var chave = Encoding.UTF8.GetBytes("safmnbasjkf15132");
             var pass = ComputeHash(usuario.Senha, algorithm:new HMACMD5(chave));
-            return _context.Usuarios.IgnoreAutoIncludes().FirstOrDefault(u => (u.Email == usuario.Email) && (u.Senha == pass));
+            return _context.Usuarios.IgnoreAutoIncludes().Include(x=>x.Perfil).FirstOrDefault(u => (u.Email == usuario.Email) && (u.Senha == pass));
         }
 
         private string ComputeHash(string input, HMACMD5 algorithm)

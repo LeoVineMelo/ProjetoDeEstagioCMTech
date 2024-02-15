@@ -46,6 +46,20 @@ namespace ProjetoCMTech.Controllers
             if (atendimento == null) return NotFound();
             return Ok(atendimento);
         }
+        [HttpPost("search")]
+        [ProducesResponseType((200), Type = typeof(AtendimentoPesquisaVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        public IActionResult Search([FromBody] AtendimentoPesquisaVO pesquisa)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (pesquisa == null) return BadRequest();
+            var itens = _atendimentoBusiness.FindAll(pesquisa);
+            var total = _atendimentoBusiness.FindAllCount(pesquisa);
+            return Ok(itens);
+        }
 
         [HttpPost]
         [ProducesResponseType((200), Type = typeof(AtendimentoVO))]

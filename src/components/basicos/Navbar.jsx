@@ -136,6 +136,8 @@ export default function PersistentDrawerLeft({ children }) {
         navigate('/relatendimentos')
     }
 
+    console.log(usuario)
+
     return (
         <Box sx={{ display: 'flex', height: '100vh', maxHeight: '100vh', overflowY: 'auto' }}>
             <CssBaseline />
@@ -222,14 +224,14 @@ export default function PersistentDrawerLeft({ children }) {
                             <ListItemText />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem className='Bottao Navbar-Menu-Item'>
+                   {usuario.perfil.id ==1 &&  <ListItem className='Bottao Navbar-Menu-Item'>
                         <ListItemButton>
                             <ListItemIcon sx={{ color: deepPurple[200], justifyContent: 'center', display: 'flex' }}>
                                 <GridViewOutlinedIcon sx={{ fontSize: 30 }} onClick={operacoes} />
                             </ListItemIcon>
                             <ListItemText />
                         </ListItemButton>
-                    </ListItem>
+                    </ListItem>}
                     <ListItem className='Bottao Navbar-Menu-Item'>
                         <ListItemButton>
                             <ListItemIcon sx={{ color: deepPurple[200], justifyContent: 'center', display: 'flex' }}>

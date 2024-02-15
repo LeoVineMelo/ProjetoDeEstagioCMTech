@@ -1,4 +1,5 @@
-﻿using ProjetoCMTech.Model;
+﻿using ProjetoCMTech.Data.VO;
+using ProjetoCMTech.Model;
 
 namespace ProjetoCMTech.Repository
 {
@@ -7,7 +8,9 @@ namespace ProjetoCMTech.Repository
         Atendimento Create(Atendimento atendimento);
 
         Atendimento FindByID(long id);
-        List<Atendimento> FindAll();
+        List<Atendimento> FindAll(AtendimentoPesquisaVO pesquisa = null);
+
+        int FindAllCount(AtendimentoPesquisaVO pesquisa = null);
 
         Atendimento Update(Atendimento atendimento);
 

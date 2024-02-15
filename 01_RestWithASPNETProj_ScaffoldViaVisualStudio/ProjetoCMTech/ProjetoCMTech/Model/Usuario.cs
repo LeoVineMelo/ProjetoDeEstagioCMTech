@@ -22,9 +22,12 @@ namespace ProjetoCMTech.Model
         [ForeignKey("Perfil")]
 
         public long PerfilId { get; set; }
-
+        
         public Perfil Perfil { get; set; }
 
+        [ForeignKey("StatusUsuario")]
+        public long StatusUsuarioId {  get; set; }
+        public StatusUsuario StatusUsuario { get; set; }
         public string Nome { get; set; }
 
         public string Email { get; set; }
@@ -42,6 +45,8 @@ namespace ProjetoCMTech.Model
         public IEnumerable<ChatAtendimento> ChatAtendimentoDestinatarios { get; set; }
 
         public IEnumerable<Connection> Connections { get; set; }
+
+        public IEnumerable<StatusUsuario> StatusUsuarios { get; set;}
 
 
     }

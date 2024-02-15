@@ -27,8 +27,8 @@ namespace ProjetoCMTech.Model.Context
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Changelog> Changelogs { get; set; }
         public DbSet<Connection> Connection { get; set; }
-
-
+        public DbSet<StatusUsuario> StatusUsuarios { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
