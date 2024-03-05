@@ -153,7 +153,7 @@ export default function ListPerfil() {
           <Button style={{color:'lightgrey'}} variant="text" onClick={operacoes}><ArrowBackIosIcon /> Voltar</Button>
         </Grid>
         <Grid justifyContent={'flex-end'} display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
-          <ColorButton variant="contained" onClick={caddepartamento/0}>Adicionar</ColorButton>
+          <ColorButton variant="contained" onClick={caddepartamento}>Adicionar</ColorButton>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
           <Paper sx={{ width: '100' }}>

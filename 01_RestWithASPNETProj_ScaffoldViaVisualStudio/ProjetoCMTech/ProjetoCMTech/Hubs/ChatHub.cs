@@ -27,7 +27,7 @@ namespace ProjetoCMTech.Hubs
                 .Select(c =>
                     new UsuarioVO(c.UsuarioId, _context.Usuarios.Where(p => p.Id == c.UsuarioId).Select(p => p.Nome).SingleOrDefault(), c.SignalrId)
                 ).ToList();
-            await Clients.Caller.SendAsync("getOnlineUsuarioResponse", onlineUsuarios);
+            await Clients.Caller.SendAsync("getOnlineUsuariosResponse", onlineUsuarios);
         }
 
         public async Task getUsuarioMessages(string connId)

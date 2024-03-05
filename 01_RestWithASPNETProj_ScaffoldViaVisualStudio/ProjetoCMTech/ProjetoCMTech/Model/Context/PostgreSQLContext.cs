@@ -33,7 +33,19 @@ namespace ProjetoCMTech.Model.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PostgreSQLContext).Assembly);
-            
+
+            modelBuilder.Entity<StatusUsuario>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.Property(e => e.UsuarioId)
+                .HasColumnName("usuario_id");
+
+               
+                
+            });
+
+            modelBuilder.Entity<Status>().HasNoKey();
 
             modelBuilder.Entity<Perfil>(entity =>
             {

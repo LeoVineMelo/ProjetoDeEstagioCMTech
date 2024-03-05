@@ -470,15 +470,7 @@ function Chat() {
           </Grid>
           <Grid item xs={12} md={12} style={{ padding: 10 }}>
             <form onSubmit={onSubmit}>
-              <label htmlFor="usuario">Selecione um destinatário:</label>
-              <br />
-              <Grid item xs={12} md={12} style={{ padding: 10 }}>
-                <BasicSelect
-                  label={"Lista"}
-                  list={connectedUsuarioList}
-                  value={receiverUsuario}
-                  handleChange={handleChangeReceiverUsuario} />
-              </Grid>
+             
               <Grid item xs={12} md={12} style={{ padding: 10 }}>
                 <Paper>
                   <MenuList>
