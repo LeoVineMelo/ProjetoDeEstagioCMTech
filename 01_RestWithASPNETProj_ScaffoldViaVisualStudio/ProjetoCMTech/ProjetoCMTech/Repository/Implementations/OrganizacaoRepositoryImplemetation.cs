@@ -15,11 +15,14 @@ namespace ProjetoCMTech.Repository.Implementations
         }
        public List<Organizacao> FindAll()
         {
-           
-            return _context.Organizacaos
+
+            var list = _context.Organizacaos
                 .Include(x => x.Segmento)
-                .Include(x =>x.Grupo)
+                .Include(x => x.Grupo)
                 .ToList();
+
+            
+                return list.ToList();
         }
 
 

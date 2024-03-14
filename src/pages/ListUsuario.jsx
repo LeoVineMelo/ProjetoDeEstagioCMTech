@@ -173,16 +173,6 @@ export default function ListUsuario() {
 
   }
 
-  /*const filteredRows = rows != null ? rows.filter(row => {
-
-    let nomeFilter = row.nome.includes(nome);
-    let cargoFilter = row.Perfil.includes(cargo);
-    let setorFilter = row.Departamento.includes(setor);
-
-    return nomeFilter && cargoFilter && setorFilter;
-  }) : rows;*/
-
-
 
 
 

@@ -172,14 +172,9 @@ export default function ListPerfil() {
                     .map((row, i) => {
                       return (
                         <TableRow key={i}>
-                          {columns && columns.map((column, i) => {
-                            let value = row[column.id];
-                            return (
-                              <TableCell style={{ backgroundColor: 'lightgrey', color: 'black' }} key={value}>
-                                {value}
-                              </TableCell>
-                            )
-                          })}
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>{row.nome}</TableCell>
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>{row.organizacao.nome}</TableCell>
+                          {}
                           <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>
                             <Button >
                               <ModeEditOutlineIcon style={{color: 'grey'}}></ModeEditOutlineIcon>

@@ -58,6 +58,11 @@ export default function ListPerfil() {
   const [page, pageChange] = useState(0);
   const [rowPerPage, rowPerPageChange] = useState(5);
 
+ const [id, setId] = useState(null);
+ 
+  const [perfil, setPerfil] = useState([]);
+  const [departamento, setDepartamento] = useState([]);
+  const [organizacao, setOrganizacao] = useState([]);
 
   useEffect(() => {
     fetch("https://localhost:44300/api/Organizacao/v1").then(resp => {
@@ -70,10 +75,7 @@ export default function ListPerfil() {
   }, [])
 
 
-  const [id, setId] = useState(null);
-  const [perfil, setPerfil] = useState([]);
-  const [departamento, setDepartamento] = useState([]);
-  const [organizacao, setOrganizacao] = useState([]);
+ 
 
  /* useEffect(() => {
     api.get('api/perfil/v1/asc', {
@@ -175,14 +177,18 @@ export default function ListPerfil() {
                     .map((row, i) => {
                       return (
                         <TableRow key={i}>
-                          {columns && columns.map((column, i) => {
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>{row.nome}</TableCell>
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>{row.telefone}</TableCell>
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>{row.segmento.nome}</TableCell>
+                          <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>{row.grupo.nome}</TableCell>
+                          {/*columns && columns.map((column, i) => {
                             let value = row[column.id];
                             return (
                               <TableCell style={{ backgroundColor: 'lightgrey', color: 'black' }} key={value}>
                                 {value}
                               </TableCell>
                             )
-                          })}
+                          })*/}
                           <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>
                             <Button >
                               <ModeEditOutlineIcon style={{color: 'grey'}}></ModeEditOutlineIcon>
