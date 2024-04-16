@@ -26,16 +26,16 @@ namespace ProjetoCMTech.Model
         public OrganizacaoVO? Organizacao { get; set; }
 
         public long PerfilId { get; set; }
-        public PerfilVO Perfil { get; set; }
+        public PerfilVO? Perfil { get; set; }
 
         public string? Nome { get; set; }
 
         public string Email { get; set; }
 
-        public string Senha { get; set; }
+        public string? Senha { get; set; }
 
         public DateTime DataCadastro { get; set; }
-        public string SignalrId { get; set; }
+        public string? SignalrId { get; set; }
 
        
     }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjetoCMTech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0369cd1a52f716d14b5de365ad263e150ab866bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjetoCMTech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjetoCMTech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,949 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\implementations\\usuariorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\implementations\\usuariorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\vo\\usuariovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\vo\\usuariovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\iusuariobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\iusuariobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\implementations\\organizacaorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\implementations\\organizacaorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\vo\\organizacaovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\vo\\organizacaovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\iorganizacaobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\iorganizacaobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\vo\\departamentovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\vo\\departamentovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\idepartamentobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\idepartamentobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\implementations\\departamentobusinessimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\implementations\\departamentobusinessimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\hubs\\ichatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\hubs\\ichatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\departamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\departamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\organizacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\organizacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\organizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\organizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\iorganizacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\iorganizacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\implementations\\chatatendimentorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\implementations\\chatatendimentorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\implementations\\segmentorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\implementations\\segmentorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\converter\\implementations\\chatatendimentoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\converter\\implementations\\chatatendimentoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\isegmentobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\isegmentobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\implementations\\usuariobusinessimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\implementations\\usuariobusinessimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\implementations\\statususuariobuisnessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\implementations\\statususuariobuisnessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\implementations\\loginbusinessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\implementations\\loginbusinessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\converter\\implementations\\usuarioconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\converter\\implementations\\usuarioconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\segmento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\segmento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\statususuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\statususuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\chatatendimentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\chatatendimentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\perfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\perfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\iperfilbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\iperfilbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\context\\postgresqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\context\\postgresqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\statususuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\statususuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\implementations\\statususuariorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\implementations\\statususuariorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\iloginbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\iloginbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\statusatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\statusatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\migrations\\20221020202601_initial.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\migrations\\20221020202601_initial.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\istatususuariobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\istatususuariobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\istatususuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\istatususuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\vo\\statususuariovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\vo\\statususuariovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\converter\\implementations\\statususuarioconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\converter\\implementations\\statususuarioconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\business\\iatendimentobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\business\\iatendimentobusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\repository\\implementations\\atendimentorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\repository\\implementations\\atendimentorepositoryimplemetation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\chatatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\chatatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\atendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\atendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\vo\\tokenvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\vo\\tokenvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\atendimentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\atendimentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\controllers\\changelogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\controllers\\changelogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\services\\implementations\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\services\\implementations\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\data\\vo\\chatatendimentovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\data\\vo\\chatatendimentovo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\model\\grupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\model\\grupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|c:\\users\\leona\\onedrive\\\u00E1rea de trabalho\\projcmtech\\projetodeestagiocmtech\\01_restwithaspnetproj_scaffoldviavisualstudio\\projetocmtech\\projetocmtech\\migrations\\20221020202601_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40687DBF-9B35-49F0-A2AD-5EAD89F86ECE}|ProjetoCMTech\\ProjetoCMTech.csproj|solutionrelative:projetocmtech\\migrations\\20221020202601_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ChatAtendimentoRepositoryImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\ChatAtendimentoRepositoryImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\Implementations\\ChatAtendimentoRepositoryImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\ChatAtendimentoRepositoryImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\Implementations\\ChatAtendimentoRepositoryImplemetation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:43:12.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IPerfilBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IPerfilBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\IPerfilBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IPerfilBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\IPerfilBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T14:48:13.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Status.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Status.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Status.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Status.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T15:47:04.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IChatClient.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Hubs\\IChatClient.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Hubs\\IChatClient.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Hubs\\IChatClient.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Hubs\\IChatClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T16:00:36.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IOrganizacaoBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IOrganizacaoBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\IOrganizacaoBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IOrganizacaoBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\IOrganizacaoBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:44:06.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DepartamentoVO.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\DepartamentoVO.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\VO\\DepartamentoVO.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\DepartamentoVO.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\VO\\DepartamentoVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T19:10:46.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrganizacaoRepositoryImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\OrganizacaoRepositoryImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\Implementations\\OrganizacaoRepositoryImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\OrganizacaoRepositoryImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\Implementations\\OrganizacaoRepositoryImplemetation.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAowCQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:43:16.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsuarioBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IUsuarioBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\IUsuarioBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IUsuarioBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\IUsuarioBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-02T14:17:02.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioVO.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\UsuarioVO.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\VO\\UsuarioVO.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\UsuarioVO.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\VO\\UsuarioVO.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowBwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-26T15:27:08.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDepartamentoBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IDepartamentoBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\IDepartamentoBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IDepartamentoBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\IDepartamentoBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:42:45.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrganizacaoVO.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\OrganizacaoVO.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\VO\\OrganizacaoVO.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\OrganizacaoVO.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\VO\\OrganizacaoVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T18:04:50.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioRepositoryImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\UsuarioRepositoryImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\Implementations\\UsuarioRepositoryImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\UsuarioRepositoryImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\Implementations\\UsuarioRepositoryImplemetation.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T13:27:51.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PostgreSQLContext.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Context\\PostgreSQLContext.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Context\\PostgreSQLContext.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Context\\PostgreSQLContext.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Context\\PostgreSQLContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T01:48:27.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Organizacao.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Organizacao.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Organizacao.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Organizacao.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Organizacao.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-05T15:29:05.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Hubs\\ChatHub.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwFsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-27T15:50:41.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DepartamentoBusinessImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\DepartamentoBusinessImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\Implementations\\DepartamentoBusinessImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\DepartamentoBusinessImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\Implementations\\DepartamentoBusinessImplemetation.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:42:42.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SegmentoRepositoryImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\SegmentoRepositoryImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\Implementations\\SegmentoRepositoryImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\SegmentoRepositoryImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\Implementations\\SegmentoRepositoryImplemetation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:43:08.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DepartamentoController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\DepartamentoController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\DepartamentoController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\DepartamentoController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\DepartamentoController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowDIAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T17:47:32.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ISegmentoBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\ISegmentoBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\ISegmentoBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\ISegmentoBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\ISegmentoBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:42:47.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ChatAtendimentoConverter.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\Converter\\Implementations\\ChatAtendimentoConverter.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\Converter\\Implementations\\ChatAtendimentoConverter.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\Converter\\Implementations\\ChatAtendimentoConverter.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\Converter\\Implementations\\ChatAtendimentoConverter.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:42:51.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PerfilController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\PerfilController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\PerfilController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\PerfilController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\PerfilController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T16:13:41.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UsuarioBusinessImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\UsuarioBusinessImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\Implementations\\UsuarioBusinessImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\UsuarioBusinessImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\Implementations\\UsuarioBusinessImplemetation.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T13:52:13.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAwwBwAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T15:41:07.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IOrganizacaoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\IOrganizacaoRepository.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\IOrganizacaoRepository.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\IOrganizacaoRepository.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\IOrganizacaoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:43:28.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrganizacaoController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\OrganizacaoController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\OrganizacaoController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\OrganizacaoController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\OrganizacaoController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:44:18.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LoginBusinessImplementation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\LoginBusinessImplementation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\Implementations\\LoginBusinessImplementation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\LoginBusinessImplementation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\Implementations\\LoginBusinessImplementation.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAewB8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-26T15:46:14.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StatusUsuarioBuisnessImplementation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\StatusUsuarioBuisnessImplementation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\Implementations\\StatusUsuarioBuisnessImplementation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\Implementations\\StatusUsuarioBuisnessImplementation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\Implementations\\StatusUsuarioBuisnessImplementation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T12:24:15.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UsuarioConverter.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\Converter\\Implementations\\UsuarioConverter.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\Converter\\Implementations\\UsuarioConverter.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\Converter\\Implementations\\UsuarioConverter.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\Converter\\Implementations\\UsuarioConverter.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-05T15:30:02.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ChatAtendimentoController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\ChatAtendimentoController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\ChatAtendimentoController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\ChatAtendimentoController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\ChatAtendimentoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T17:47:26.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Departamento.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Departamento.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Departamento.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Departamento.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Departamento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T02:42:23.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "StatusUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\StatusUsuario.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\StatusUsuario.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\StatusUsuario.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\StatusUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T13:45:23.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Segmento.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Segmento.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Segmento.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Segmento.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Segmento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T02:43:42.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Usuario.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Usuario.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Usuario.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Usuario.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwDAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T02:43:55.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "AtendimentoRepositoryImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\AtendimentoRepositoryImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\Implementations\\AtendimentoRepositoryImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\AtendimentoRepositoryImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\Implementations\\AtendimentoRepositoryImplemetation.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowD8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T18:28:53.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "StatusAtendimento.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\StatusAtendimento.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\StatusAtendimento.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\StatusAtendimento.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\StatusAtendimento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T02:43:48.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "IAtendimentoBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IAtendimentoBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\IAtendimentoBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IAtendimentoBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\IAtendimentoBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-02T14:31:57.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ILoginBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\ILoginBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\ILoginBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\ILoginBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\ILoginBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-08T17:19:26.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "StatusUsuarioConverter.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\Converter\\Implementations\\StatusUsuarioConverter.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\Converter\\Implementations\\StatusUsuarioConverter.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\Converter\\Implementations\\StatusUsuarioConverter.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\Converter\\Implementations\\StatusUsuarioConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T16:00:15.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ChatAtendimento.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\ChatAtendimento.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\ChatAtendimento.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\ChatAtendimento.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\ChatAtendimento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T01:14:09.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Atendimento.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Atendimento.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Atendimento.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Atendimento.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Atendimento.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T02:39:37.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IStatusUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\IStatusUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\IStatusUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\IStatusUsuarioRepository.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\IStatusUsuarioRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T14:54:28.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Connection.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Connection.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Connection.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Connection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T00:55:23.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IStatusUsuarioBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IStatusUsuarioBusiness.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Business\\IStatusUsuarioBusiness.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Business\\IStatusUsuarioBusiness.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Business\\IStatusUsuarioBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T14:42:36.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "StatusUsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\StatusUsuarioController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\StatusUsuarioController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\StatusUsuarioController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\StatusUsuarioController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T13:40:20.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "StatusUsuarioRepositoryImplemetation.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\StatusUsuarioRepositoryImplemetation.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Repository\\Implementations\\StatusUsuarioRepositoryImplemetation.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Repository\\Implementations\\StatusUsuarioRepositoryImplemetation.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Repository\\Implementations\\StatusUsuarioRepositoryImplemetation.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwC4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T12:57:14.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20221020202601_initial.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Migrations\\20221020202601_initial.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Migrations\\20221020202601_initial.Designer.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Migrations\\20221020202601_initial.Designer.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Migrations\\20221020202601_initial.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T01:10:04.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T15:41:47.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "StatusUsuarioVO.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\StatusUsuarioVO.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\VO\\StatusUsuarioVO.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\StatusUsuarioVO.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\VO\\StatusUsuarioVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T14:45:26.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "TokenVO.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\TokenVO.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\VO\\TokenVO.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\TokenVO.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\VO\\TokenVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-08T12:28:53.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Program.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Program.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Program.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAIBJwDkAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-26T15:35:32.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "AtendimentoController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\AtendimentoController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\AtendimentoController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\AtendimentoController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\AtendimentoController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T17:47:10.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ChangelogController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\ChangelogController.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Controllers\\ChangelogController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Controllers\\ChangelogController.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Controllers\\ChangelogController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-29T17:47:18.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Services\\Implementations\\TokenService.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Services\\Implementations\\TokenService.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Services\\Implementations\\TokenService.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Services\\Implementations\\TokenService.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAADgvz8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-02T14:26:13.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\appsettings.json",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\appsettings.json",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\appsettings.json",
+              "RelativeToolTip": "ProjetoCMTech\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2023-12-27T13:58:28.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "20221020202601_initial.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Migrations\\20221020202601_initial.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Migrations\\20221020202601_initial.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Migrations\\20221020202601_initial.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Migrations\\20221020202601_initial.cs",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAgwHgBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T00:59:21.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Grupo.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Grupo.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Model\\Grupo.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Model\\Grupo.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Model\\Grupo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T02:42:39.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "DataContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Migrations\\DataContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Migrations\\DataContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T03:28:29.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ChatAtendimentoVO.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\ChatAtendimentoVO.cs",
+              "RelativeDocumentMoniker": "ProjetoCMTech\\Data\\VO\\ChatAtendimentoVO.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\\u00C1rea de Trabalho\\projCmtech\\ProjetoDeEstagioCMTech\\01_RestWithASPNETProj_ScaffoldViaVisualStudio\\ProjetoCMTech\\ProjetoCMTech\\Data\\VO\\ChatAtendimentoVO.cs",
+              "RelativeToolTip": "ProjetoCMTech\\Data\\VO\\ChatAtendimentoVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T01:21:52.882Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
