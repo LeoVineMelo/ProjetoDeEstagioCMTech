@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { useNavigate } from 'react-router-dom';
-
+import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import Card from '../components/layout/Card';
 import Stack from '@mui/material/Stack';
@@ -19,6 +19,7 @@ import { purple } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import Select from '@mui/material/Select';
 
 
 
@@ -57,16 +58,17 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
-
 export default function CadastroDeOrganizacao() {
 
+const {organizacaoId} = useParams();
 const [id, setId] = useState(null);
-const [idSegmento, setIdSegmento] = useState('');
-const [idGrupo, setidGrupo] = useState('');
 const [nomeOrganizacao, setNomeOrganizacao] = useState('');
 const [telefone, setTelefone] = useState('');
+const [options, setOptions] = useState([]);
+const [selectedOption, setSelectedOption] = useState('');
+const [options2, setOptions2] = useState([]);
+const [selectedOption2, setSelectedOption2] = useState('');
 
-const {organizacaoId} = useParams();
 
 const accessToken = localStorage.getItem('accessToken');
 
@@ -95,7 +97,59 @@ const navigate = useNavigate()
     }
   }
 
+// Função para salvar o organizacao
+async function saveOrganizacao() {
+  try {
+    const response = await api.post("/api/organizacao/v1", {
+      //especificar o nome que vai receber 
+     nome: nomeOrganizacao,
+     segmentoid: selectedOption2,
+     grupoid: selectedOption,
+     telefone,
+    });
+    console.log('Organizacao salvo com sucesso:', response.data);
+    navigate('/listorganizacao');
+  } catch (error) {
+    console.error('Erro ao salvar organizacao:', error);
+    alert('Erro ao salvar organizacao, tente novamente');
+  }
+}
 
+ //listagem de gurpo
+
+ useEffect(() => {
+  async function fetchData() {
+    try {
+      const response = await api.get('https://localhost:44300/api/Grupo/v1'); // Rota da API para obter as opções
+      setOptions(response.data);
+    } catch (error) {
+      console.error('Erro ao buscar opções:', error);
+    }
+  }
+  fetchData();
+}, []);
+
+const handleChange = (event) => {
+  setSelectedOption(event.target.value);
+};
+
+//listagem de segmento
+
+useEffect(() => {
+  async function fetchData() {
+    try {
+      const response = await api.get('https://localhost:44300/api/Segmento/v1'); // Rota da API para obter as opções
+      setOptions2(response.data);
+    } catch (error) {
+      console.error('Erro ao buscar opções:', error);
+    }
+  }
+  fetchData();
+}, []);
+
+const handleChange2 = (event) => {
+  setSelectedOption2(event.target.value);
+};
 
 
 
@@ -119,21 +173,48 @@ const listorganizacao = (e) => {
                     
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Nome da Organização</p> </Grid>
                     <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <TextField prop fullWidth id="outlined-basic" label="Nome da Organização" variant="outlined" />
+                        <TextField prop fullWidth id="outlined-basic" label="Nome da Organização" variant="outlined"
+                        value={nomeOrganizacao}
+                        onChange={(e) => setNomeOrganizacao(e.target.value)} />
+                      
                     </Grid>
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Telefone</p></Grid>
                     <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <TextField prop fullWidth id="outlined-basic" label="Telefone" variant="outlined" />
+                        <TextField prop fullWidth id="outlined-basic" label="Telefone" variant="outlined" 
+                        value={telefone}
+                        onChange={(e) => setTelefone(e.target.value)}/>
 
                     </Grid>
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Segmento</p></Grid>
                     <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <TextField className='Arredondado' prop fullWidth id="outlined-basic" label="Segmento" variant="outlined" />
+                    <Select fullWidth sx={{
+                      borderRadius:'5px',
+                      }} value={selectedOption2} onChange={handleChange2}  displayEmpty>
+                    <MenuItem value="" disabled>
+                    Selecione uma opção
+                    </MenuItem>
+                    {options2.map((option) => (
+                    <MenuItem key={option.id} value={option.id}>
+                    {option.nome}
+                    </MenuItem>
+                      ))}
+                     </Select>
 
                     </Grid>
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Grupo</p></Grid>
                     <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <TextField className='Arredondado' prop fullWidth id="outlined-basic" label="Grupo" variant="outlined" />
+                    <Select fullWidth sx={{
+                      borderRadius:'5px',
+                     }} value={selectedOption} onChange={handleChange}  displayEmpty>
+                    <MenuItem value="" disabled>
+                    Selecione uma opção
+                    </MenuItem>
+                    {options.map((option) => (
+                    <MenuItem key={option.id} value={option.id}>
+                    {option.nome}
+                    </MenuItem>
+                      ))}
+                     </Select>
 
                     </Grid>
 
@@ -142,7 +223,7 @@ const listorganizacao = (e) => {
                             Cancelar
                         </ColorButton1>
 
-                        <ColorButton className='Botao' variant="contained" >
+                        <ColorButton onClick={saveOrganizacao} className='Botao' variant="contained" >
                             Salvar
                         </ColorButton>
                     </Grid>

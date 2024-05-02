@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -9,16 +9,16 @@ import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
-
+import { useEffect } from 'react';
 import '../components/basicos/Navbar.css'
-
+import Select from '@mui/material/Select';
 import { IconButton } from '@mui/material';
 import Autocomplete from '@mui/material/Autocomplete';
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/basicos/Navbar'
 import { Avatar, Grid } from '@mui/material';
 import User from '../components/basicos/User';
-
+import MenuItem from '@mui/material/MenuItem';
 import { purple } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
 
@@ -91,12 +91,18 @@ export default function NovoUsuario() {
 
     const [nome, setNome] = React.useState('');
     const [email, setEmail] = React.useState('');
-    const [grupo, setGrupo] = React.useState('');
+    const [nomeEmpresa, setNomeEmpresa] = React.useState('');
     const [perfil, setPerfil] = React.useState('');
     const [departamento, setDepartamento] = React.useState('');
+    const [cargo, setCargo] = React.useState(' ');
+    const [setor, setSetor] = React.useState(' ');
     const [dataCadastro, setDataCadastro] = React.useState('');
-
-
+    const [options, setOptions] = useState([]);
+    const [selectedOption, setSelectedOption] = useState('');
+    const [options2, setOptions2] = useState([]);
+    const [selectedOption2, setSelectedOption2] = useState('');
+    const [options3, setOptions3] = useState([]);
+    const [selectedOption3, setSelectedOption3] = useState('');
 
     const navigate = useNavigate();
 
@@ -118,11 +124,7 @@ export default function NovoUsuario() {
         const dataHoraFormatada = dataAtual.toLocaleString('pt-BR', options);
 
         const data = {
-            nome,
-            email,
-            grupo,
-            perfil,
-            departamento,
+            
             dataCadastro: dataHoraFormatada,
         }
 
@@ -143,6 +145,86 @@ export default function NovoUsuario() {
 
 
 }
+
+   // Função para salvar o cliente
+   async function saveUsuario() {
+    try {
+      const response = await api.post("/api/usuario/v1", {
+        //especificar o nome que vai receber 
+       nome: nome,
+       email: email,
+       organizacaoid: selectedOption,
+       //nomeEmpresa
+       perfilid:selectedOption2,
+       //cargo
+       senha: "mudarsenha123",
+       departamentoid:selectedOption3 ,
+       //setor
+       
+
+
+      });
+      console.log('Departamento salvo com sucesso:', response.data);
+      navigate('/listusuario');
+    } catch (error) {
+      console.error('Erro ao salvar departamento:', error);
+      alert('Erro ao salvar departamento, tente novamente');
+    }
+  }
+
+   //listagem de organização/empresa
+
+   useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await api.get('https://localhost:44300/api/Organizacao/v1'); // Rota da API para obter as opções
+        setOptions(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar opções:', error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  //listagem de perfil/cargo
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await api.get('https://localhost:44300/api/Perfil/v1'); // Rota da API para obter as opções
+        setOptions2(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar opções:', error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const handleChange2 = (event) => {
+    setSelectedOption2(event.target.value);
+  };
+
+  //listagem de departamento/setor
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await api.get('https://localhost:44300/api/Departamento/v1'); // Rota da API para obter as opções
+        setOptions3(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar opções:', error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const handleChange3 = (event) => {
+    setSelectedOption3(event.target.value);
+  };
 
 
 return (
@@ -169,45 +251,53 @@ return (
             <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Empresa</p></Grid>
             <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
                 
-            <Autocomplete
-                    disablePortal
-                    id="combo-box-demo"
-                    options={Empresa}
-                    prop fullWidth
-                    renderInput={(params) => <TextField {...params} label="Empresa"
-                        value={grupo}
-                        onChange={e => setGrupo(e.target.value)} />}
-                />
+            
+          <Select fullWidth sx={{
+            borderRadius:'5px',
+            }} value={selectedOption} onChange={handleChange}  displayEmpty>
+            <MenuItem value="" disabled>
+              Selecione uma opção
+            </MenuItem>
+            {options.map((option) => (
+              <MenuItem key={option.id} value={option.id}>
+                {option.nome}
+              </MenuItem>
+            ))}
+          </Select>
+        
 
             </Grid>
 
             <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>Cargo</p></Grid>
             <Grid item xs={5} sm={5} md={5} lg={5} xl={5}>
-                <Autocomplete
-                    className='Arredondado'
-                    disablePortal
-                    id="combo-box-demo"
-                    options={Cargos}
-                    sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label="Cargos"
-                        value={perfil}
-                        onChange={e => setPerfil(e.target.value)} />}
-                />
-
+            <Select fullWidth sx={{
+            borderRadius:'5px',
+            }} value={selectedOption2} onChange={handleChange2}  displayEmpty>
+            <MenuItem value="" disabled>
+              Selecione uma opção
+            </MenuItem>
+            {options2.map((option) => (
+              <MenuItem key={option.id} value={option.id}>
+                {option.nome}
+              </MenuItem>
+            ))}
+          </Select>
             </Grid>
 
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1}><p>Setor</p></Grid>
             <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
-                <Autocomplete
-                    
-                    disablePortal
-                    id="combo-box-demo"
-                    options={Setores}
-                    sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label="Setores"
-                        value={departamento}
-                        onChange={e => setDepartamento(e.target.value)} />}
-                />
+            <Select fullWidth sx={{
+            borderRadius:'5px',
+            }} value={selectedOption3} onChange={handleChange3}  displayEmpty>
+            <MenuItem value="" disabled>
+              Selecione uma opção
+            </MenuItem>
+            {options3.map((option) => (
+              <MenuItem key={option.id} value={option.id}>
+                {option.nome}
+              </MenuItem>
+            ))}
+          </Select>
 
             </Grid>
 
@@ -216,7 +306,7 @@ return (
                     Cancelar
                 </ColorButton1>
 
-                <ColorButton className='Botao' variant="contained" color="success"
+                <ColorButton onClick={saveUsuario} className='Botao' variant="contained" color="success"
                     type="submit"
                 >
                     Salvar

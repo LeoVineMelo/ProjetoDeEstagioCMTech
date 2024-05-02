@@ -82,6 +82,32 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function AutoGrid() {
     const navigate = useNavigate()
 
+    // Estados para armazenar os dados do departamento e da organização
+    const [nomeCliente, setNomeCliente] = useState('');
+    const [email, setEmail] = useState('');
+    const [nomeEmpresa, setNomeEmpresa] = useState('');
+
+
+    // Função para salvar o cliente
+  async function saveCliente() {
+    try {
+      const response = await api.post("/api/usuario/v1", {
+        //especificar o nome que vai receber 
+       nome: nomeCliente,
+       email: email,
+       organizacaoid: nomeEmpresa,
+       perfilid:3,
+       senha: "mudarsenha123",
+      });
+      console.log('Departamento salvo com sucesso:', response.data);
+      navigate('/listdepartamento');
+    } catch (error) {
+      console.error('Erro ao salvar departamento:', error);
+      alert('Erro ao salvar departamento, tente novamente');
+    }
+  }
+
+
         const home = (e) =>{
              e.preventDefault()
      
@@ -117,6 +143,9 @@ export default function AutoGrid() {
                         id="reddit-input"
                         variant="filled"
                         style={{ marginTop: 11 }}
+                        value={nomeCliente}
+                        onChange={(e) => 
+                        setNomeCliente(e.target.value)}
                     />
                 </Grid>
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={2}><p>E-mail</p></Grid>
@@ -128,6 +157,9 @@ export default function AutoGrid() {
                         id="reddit-input"
                         variant="filled"
                         style={{ marginTop: 11 }}
+                        value={email}
+                        onChange={(e) => 
+                        setEmail(e.target.value)}
                     />
 
                 </Grid>
@@ -140,6 +172,9 @@ export default function AutoGrid() {
                         id="reddit-input"
                         variant="filled"
                         style={{ marginTop: 11 }}
+                        value={nomeEmpresa}
+                        onChange={(e) => 
+                        setNomeEmpresa(e.target.value)}
                     />
                 </Grid>
 
@@ -148,7 +183,7 @@ export default function AutoGrid() {
                         Cancelar
                     </ColorButton1>
 
-                    <ColorButton className='Botao' variant="contained" >
+                    <ColorButton onClick={saveCliente} className='Botao' variant="contained" >
                         Salvar
                     </ColorButton>
                 </Grid>

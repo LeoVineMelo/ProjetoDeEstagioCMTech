@@ -124,20 +124,20 @@ export default function ListPerfil() {
 
   const navigate = useNavigate()
 
-  /*async function editDepartamento(id){
+  async function editDepartamento(id){
     try {
       navigate(`caddepartamento/${id}`)
     } catch (error) {
       alert('A edição falhou, tente novamente.');
     }
-  }*/
+  }
 
   //botão de edição : <button onClick={()=> editDepartamento(departamento.id)}
 
   const caddepartamento = (e) => {
     e.preventDefault()
 
-    navigate('/caddepartamento')
+    navigate(`/caddepartamento/${id}`)
   }
 
   const operacoes = (e) => {
@@ -153,7 +153,7 @@ export default function ListPerfil() {
           <Button style={{color:'lightgrey'}} variant="text" onClick={operacoes}><ArrowBackIosIcon /> Voltar</Button>
         </Grid>
         <Grid justifyContent={'flex-end'} display={'flex'} item xs={6} sm={6} md={6} lg={6} xl={6}>
-          <ColorButton variant="contained" onClick={caddepartamento}>Adicionar</ColorButton>
+          <ColorButton variant="contained" onClick={() =>caddepartamento(departamento.id=0)}>Adicionar</ColorButton>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
           <Paper sx={{ width: '100' }}>
@@ -177,7 +177,7 @@ export default function ListPerfil() {
                           {}
                           <TableCell style={{ backgroundColor: 'lightgrey', color: 'black'}}>
                             <Button >
-                              <ModeEditOutlineIcon style={{color: 'grey'}}></ModeEditOutlineIcon>
+                              <ModeEditOutlineIcon onClick={() => editDepartamento(departamento.id)} style={{color: 'grey'}}></ModeEditOutlineIcon>
                             </Button>
                             <Button >
                               <DeleteOutlinedIcon style={{color: 'grey'}}></DeleteOutlinedIcon>

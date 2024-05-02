@@ -5,11 +5,16 @@ import User from '../components/basicos/User';
 import {useNavigate, useParams} from 'react-router-dom'
 import '../components/basicos/Navbar.css'
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
+import { styled, alpha } from '@mui/material/styles';
 import api from '../services/api';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { useEffect } from 'react';
+import InputLabel from '@mui/material/InputLabel';
+import InputBase from '@mui/material/InputBase';
+import FormControl from '@mui/material/FormControl';
+import TableCell from '@mui/material/TableCell';
+import Select from '@mui/material/Select';
 
 
 import { purple } from '@mui/material/colors';
@@ -42,53 +47,67 @@ const ColorButton = styled(Button)(({ theme }) => ({
   }));
 
 
+  const BootstrapInput = styled(InputBase)(({ theme }) => ({
+    'label + &': {
+      marginTop: theme.spacing(3),
+    },
+    '& .MuiInputBase-input': {
+      borderRadius: 20,
+      position: 'relative',
+      backgroundColor: theme.palette.mode === 'light' ? '#F3F6F9' : '#1A2027',
+      border: '1px solid',
+      borderColor: theme.palette.mode === 'light' ? '#E0E3E7' : '#2D3843',
+      fontSize: 16,
+      width: '100',
+      padding: '10px 20px',
+      marginLeft: '30%',
+      marginRight:'30%',
+      transition: theme.transitions.create([
+        'border-color',
+        'background-color',
+        'box-shadow',
+      ]),
+      // Use the system font instead of the default Roboto font.
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+      '&:focus': {
+        boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
+        borderColor: theme.palette.primary.main,
+      },
+    },
+  }));
 
+//  mudar para uma listagem de organização
 const organizacao = [
-  {
-    value: 'Org1',
-    label: 'CMTech',
-  },
-  {
-    value: 'Org2',
-    label: 'porto1',
-  },
-  {
-    value: 'Org3',
-    label: 'porto2',
-  },
-  {
-    value: 'Org4',
-    label: 'porto3',
-  },
+  { id: 'nome', },
 ];
-const departamento = [
-  {
-    value: 'Dep1',
-    label: 'Suporte',
-  },
-  {
-    value: 'Dep2',
-    label: 'Administrativo',
-  },
-  {
-    value: 'Dep3',
-    label: 'Finaceiro',
-  },
-  {
-    value: 'Dep4',
-    label: 'Comercial',
-  },
-];
+
+
 
 
 export default function CadDepartamento() {
 
+  const navigate = useNavigate()
+  const { departamentoId } = useParams();
   const [id, setId] = useState(null);
-  const [nomePerfil, setNomePerfil] = useState('');
+
+
+ // Estados para armazenar os dados do departamento e da organização
   const [nomeDepartamento, setNomeDepartamento] = useState('');
   const [nomeOrganizacao, setNomeOrganizacao] = useState('');
-
-  const {departamentoId} = useParams();
+  const [options, setOptions] = useState([]);
+  const [selectedOption, setSelectedOption] = useState('');
+  
 
 
   const accessToken = localStorage.getItem('accessToken');
@@ -104,26 +123,52 @@ export default function CadDepartamento() {
     else loadDepartamento();
   }, departamentoId);
 
+  // Função para carregar os dados do departamento
   async function loadDepartamento() {
     try {
-      const response = await api.get(`api/departamento/v1/${departamentoId}`, authorization)
-
-      setId(response.data.id);
-      setNomePerfil(response.data.nome);
+      const response = await api.get(`api/departamento/v1/${departamentoId}`);
+      const departamento = response.data;
+      setNomeDepartamento(departamento.nomeDepartamento);
+      setNomeOrganizacao(departamento.nomeOrganizacao);
     } catch (error) {
-      alert('Erro de carregamento, tente novamente')
-      navigate('/listdepartamento')
+      console.error('Erro ao carregar departamento:', error);
+      alert('Erro de carregamento, tente novamente');
+      navigate('/listdepartamento');
+    }
+  }
+// Função para salvar o departamento
+  async function saveDepartamento() {
+    try {
+      const response = await api.post("/api/departamento/v1", {
+        //especificar o nome que vai receber 
+       nome: nomeDepartamento,
+       organizacaoid: selectedOption,
+      });
+      console.log('Departamento salvo com sucesso:', response.data);
+      navigate('/listdepartamento');
+    } catch (error) {
+      console.error('Erro ao salvar departamento:', error);
+      alert('Erro ao salvar departamento, tente novamente');
     }
   }
 
-  const navigate = useNavigate()
+  //listagem de organização
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await api.get('https://localhost:44300/api/Organizacao/v1'); // Rota da API para obter as opções
+        setOptions(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar opções:', error);
+      }
+    }
+    fetchData();
+  }, []);
 
-  async function CreateNewPerfil(e) {
-    e.preventDefault();
-  }
-
-  
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
 
   const listDepartamento = (e) =>{
@@ -139,46 +184,37 @@ export default function CadDepartamento() {
         
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 
-          <TextField
+        <InputLabel shrink htmlFor="nome-departamento">
+          Nome do Departamento
+        </InputLabel>
+        <BootstrapInput value={nomeDepartamento}
+        onChange={(e) => setNomeDepartamento(e.target.value)}  id="nome-departamento" fullWidth />
 
-            className='Formu'
-            id="outlined-select-currency"
-            select
-            label="Select"
-            defaultValue="Dep1"
-            helperText="Selecione o Departamento"
-          >
-            {departamento.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-
+          
+           
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-
-          <TextField
-            className='Formu'
-            id="outlined-select-currency"
-            select
-            label="Select"
-            defaultValue="Org1"
-            helperText="Selecione a Organizaçao"
-          >
-            {organizacao.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
+          <Select sx={{width: '40%',
+            borderRadius:'30px',
+            marginLeft: '30%',
+            marginRight:'30%',}} value={selectedOption} onChange={handleChange}  displayEmpty>
+            <MenuItem value="" disabled>
+              Selecione uma opção
+            </MenuItem>
+            {options.map((option) => (
+              <MenuItem key={option.id} value={option.id}>
+                {option.nome}
               </MenuItem>
             ))}
-          </TextField>
-        </Grid >
+          </Select>
+        </Grid>
         <Grid justifyContent={'center'} item xs={12} sm={12} md={12} lg={12} xl={12}display={'flex'}>
-          <ColorButton1 className='BotaoCancelar' variant="contained"  display={'flex'} onClick={listDepartamento}>
+          <ColorButton1 className='BotaoCancelar' variant="contained"  display={'flex'}
+           onClick={listDepartamento}>
             Cancelar
           </ColorButton1>
        
-        <ColorButton className='BotaoSalvar' variant="contained" onClick={listDepartamento} >
+        <ColorButton className='BotaoSalvar' variant="contained" type='submit' onClick={saveDepartamento} >
                            Salvar
                         </ColorButton>
         </Grid>
